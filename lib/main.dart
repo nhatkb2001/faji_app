@@ -15,14 +15,14 @@ Future<void> main() async {
   initScreen = (preferences.getInt('initScreenstore') ?? 0);
   await preferences.setInt('initScreen', 1);
   await Firebase.initializeApp();
-  runApp(FerceApp());
+  runApp(FajiApp());
 }
 
-class FerceApp extends StatelessWidget {
+class FajiApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ferce',
+      title: 'Faji',
       debugShowCheckedModeBanner: false,
       // themeMode: ThemeMode.dark,
       // darkTheme: ThemeData.dark(),
