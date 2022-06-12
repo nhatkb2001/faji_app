@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/colors.dart';
-import 'package:ferce_app/models/commentReelModel.dart';
-import 'package:ferce_app/models/reelModel.dart';
-import 'package:ferce_app/models/userModel.dart';
-import 'package:ferce_app/views/reel/commentReel.dart';
+import 'package:faji_app/constants/colors.dart';
+import 'package:faji_app/models/commentReelModel.dart';
+import 'package:faji_app/models/reelModel.dart';
+import 'package:faji_app/models/userModel.dart';
+import 'package:faji_app/views/reel/commentReel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';

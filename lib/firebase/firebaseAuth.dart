@@ -1,7 +1,7 @@
 // import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/views/dashboard/dashboard.dart';
-import 'package:ferce_app/views/navigationBar/navigationBar.dart';
-import 'package:ferce_app/views/widget/snackBarWidget.dart';
+import 'package:faji_app/views/dashboard/dashboard.dart';
+import 'package:faji_app/views/navigationBar/navigationBar.dart';
+import 'package:faji_app/views/widget/snackBarWidget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/models/reelModel.dart';
-import 'package:ferce_app/views/reel/contentScreen.dart';
-import 'package:ferce_app/views/reel/createReel.dart';
+import 'package:faji_app/models/reelModel.dart';
+import 'package:faji_app/views/reel/contentScreen.dart';
+import 'package:faji_app/views/reel/createReel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,7 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 ///add constants
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 import 'package:video_player/video_player.dart';
 
 class atReelScreen extends StatefulWidget {

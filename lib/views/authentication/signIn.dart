@@ -1,17 +1,17 @@
-import 'package:ferce_app/firebase/firebaseAuth.dart';
-import 'package:ferce_app/views/authentication/forgotPassword.dart';
-import 'package:ferce_app/views/authentication/signUp.dart';
-import 'package:ferce_app/views/navigationBar/navigationBar.dart';
-import 'package:ferce_app/views/widget/snackBarWidget.dart';
+import 'package:faji_app/firebase/firebaseAuth.dart';
+import 'package:faji_app/views/authentication/forgotPassword.dart';
+import 'package:faji_app/views/authentication/signUp.dart';
+import 'package:faji_app/views/navigationBar/navigationBar.dart';
+import 'package:faji_app/views/widget/snackBarWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 //import constants
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/constants/colors.dart';
-import 'package:ferce_app/constants/fonts.dart';
-import 'package:ferce_app/constants/others.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/constants/colors.dart';
+import 'package:faji_app/constants/fonts.dart';
+import 'package:faji_app/constants/others.dart';
 import 'package:iconsax/iconsax.dart';
 
 class signInScreen extends StatefulWidget with InputValidationMixin {

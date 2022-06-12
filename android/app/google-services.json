@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "1017790268193",
-    "project_id": "ferceapp",
-    "storage_bucket": "ferceapp.appspot.com"
+    "project_number": "341700186300",
+    "project_id": "faji-app",
+    "storage_bucket": "faji-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1017790268193:android:a091f41335b8632a473460",
+        "mobilesdk_app_id": "1:341700186300:android:db421358159b536068c0b9",
         "android_client_info": {
-          "package_name": "com.example.ferce_app"
+          "package_name": "com.example.faji_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1017790268193-tg5ngtjo0hu865e0bopp2b5fu19sumvn.apps.googleusercontent.com",
+          "client_id": "341700186300-06kh5gjums32722r2cgngj8c86hcc5vb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.ferce_app",
+            "package_name": "com.example.faji_app",
             "certificate_hash": "b74bedf2f0d669cd5403bb6758d0b9f4e8ea2d5d"
           }
         },
         {
-          "client_id": "1017790268193-of4uoltaa4sr9ieu39l1m2t0oj6dqag2.apps.googleusercontent.com",
+          "client_id": "341700186300-g1ivgu67pqum8904a7p925d11al15791.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDu-mRGHffLdaNK3PLMrdSZFyWYdKV9nLE"
+          "current_key": "AIzaSyBbdx_S27ARlrz_Simqsi-Vp6pmn3QK60k"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1017790268193-of4uoltaa4sr9ieu39l1m2t0oj6dqag2.apps.googleusercontent.com",
+              "client_id": "341700186300-g1ivgu67pqum8904a7p925d11al15791.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

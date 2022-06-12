@@ -2,14 +2,14 @@ import 'dart:io';
 
 import 'package:chewie/chewie.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/models/postModel.dart';
-import 'package:ferce_app/models/userModel.dart';
-import 'package:ferce_app/views/dashboard/comment.dart';
-import 'package:ferce_app/views/dashboard/createPost.dart';
-import 'package:ferce_app/views/dashboard/postVideo.dart';
-import 'package:ferce_app/views/message/messagesCenter.dart';
-import 'package:ferce_app/views/story/storyScreen.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/postModel.dart';
+import 'package:faji_app/models/userModel.dart';
+import 'package:faji_app/views/dashboard/comment.dart';
+import 'package:faji_app/views/dashboard/createPost.dart';
+import 'package:faji_app/views/dashboard/postVideo.dart';
+import 'package:faji_app/views/message/messagesCenter.dart';
+import 'package:faji_app/views/story/storyScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ import 'package:flutter/src/widgets/text.dart';
 import 'package:intl/intl.dart';
 
 ///add constants
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 import 'package:video_player/video_player.dart';
 
 class atDashboardScreen extends StatefulWidget {

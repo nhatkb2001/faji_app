@@ -1,8 +1,8 @@
-import 'package:ferce_app/views/dashboard/dashboard.dart';
-import 'package:ferce_app/views/notification/notification.dart';
-import 'package:ferce_app/views/profile/profile.dart';
-import 'package:ferce_app/views/reel/reel.dart';
-import 'package:ferce_app/views/searching/searching.dart';
+import 'package:faji_app/views/dashboard/dashboard.dart';
+import 'package:faji_app/views/notification/notification.dart';
+import 'package:faji_app/views/profile/profile.dart';
+import 'package:faji_app/views/reel/reel.dart';
+import 'package:faji_app/views/searching/searching.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 
 class navigationBar extends StatefulWidget {
   String uid;

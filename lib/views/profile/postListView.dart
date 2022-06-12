@@ -1,10 +1,10 @@
 import 'package:chewie/chewie.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/colors.dart';
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/models/postModel.dart';
-import 'package:ferce_app/views/dashboard/comment.dart';
-import 'package:ferce_app/views/dashboard/postVideo.dart';
+import 'package:faji_app/constants/colors.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/postModel.dart';
+import 'package:faji_app/views/dashboard/comment.dart';
+import 'package:faji_app/views/dashboard/postVideo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';

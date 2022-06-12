@@ -3,10 +3,10 @@ import 'dart:typed_data';
 
 import 'package:chewie/chewie.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/models/userModel.dart';
-import 'package:ferce_app/views/dashboard/postVideo.dart';
-import 'package:ferce_app/views/profile/profile.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/userModel.dart';
+import 'package:faji_app/views/dashboard/postVideo.dart';
+import 'package:faji_app/views/profile/profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,7 +20,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:intl/intl.dart';
 
 ///add constants
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 import 'package:tflite/tflite.dart';
 
 class atClassifyImageScreen extends StatefulWidget {

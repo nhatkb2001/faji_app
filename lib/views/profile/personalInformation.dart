@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/models/userModel.dart';
-import 'package:ferce_app/views/widget/dialogWidget.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/userModel.dart';
+import 'package:faji_app/views/widget/dialogWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ import 'package:intl/intl.dart';
 import 'package:meta/meta.dart';
 
 ///add constants
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';

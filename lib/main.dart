@@ -1,6 +1,6 @@
-import 'package:ferce_app/views/authentication/signIn.dart';
-import 'package:ferce_app/views/profile/changingPassword.dart';
-import 'package:ferce_app/views/profile/edittingProfile.dart';
+import 'package:faji_app/views/authentication/signIn.dart';
+import 'package:faji_app/views/profile/changingPassword.dart';
+import 'package:faji_app/views/profile/edittingProfile.dart';
 import 'package:flutter/material.dart';
 // Import the generated file
 import 'package:firebase_core/firebase_core.dart';

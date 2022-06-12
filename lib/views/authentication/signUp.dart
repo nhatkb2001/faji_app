@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:email_auth/email_auth.dart';
-import 'package:ferce_app/firebase/firebaseAuth.dart';
-import 'package:ferce_app/views/authentication/signIn.dart';
-import 'package:ferce_app/views/widget/snackBarWidget.dart';
+import 'package:faji_app/firebase/firebaseAuth.dart';
+import 'package:faji_app/views/authentication/signIn.dart';
+import 'package:faji_app/views/widget/snackBarWidget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +12,10 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 //import constants
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/constants/colors.dart';
-import 'package:ferce_app/constants/fonts.dart';
-import 'package:ferce_app/constants/others.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/constants/colors.dart';
+import 'package:faji_app/constants/fonts.dart';
+import 'package:faji_app/constants/others.dart';
 import 'package:iconsax/iconsax.dart';
 
 class signUpScreen extends StatefulWidget with InputValidationMixin {
