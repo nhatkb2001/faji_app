@@ -1,4 +1,4 @@
-package com.example.ferce_app
+package com.example.faji_app
 
 import io.flutter.embedding.android.FlutterActivity
 

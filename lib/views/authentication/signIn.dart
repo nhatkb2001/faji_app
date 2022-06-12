@@ -68,7 +68,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                       width: 327 + 24,
                       alignment: Alignment.topLeft,
                       child: Text(
-                        'Say hi with Ferce’s World! Please enter your details and enjoy it.',
+                        'Say hi with Faji’s World! Please enter your details and enjoy it.',
                         style: TextStyle(
                             fontFamily: 'Urbanist',
                             fontSize: 16,

@@ -192,7 +192,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
     super.initState();
     // Initialize the package
     emailAuth = new EmailAuth(
-      sessionName: "Ferce Application",
+      sessionName: "Faji Application",
     );
   }
 
@@ -247,7 +247,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                 Container(
                   width: 327 + 24,
                   child: Text(
-                    'Only one step left to be part of the Ferce' +
+                    'Only one step left to be part of the Faji' +
                         's World community!',
                     style: TextStyle(
                         fontFamily: 'Urbanist',

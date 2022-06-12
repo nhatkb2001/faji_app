@@ -222,7 +222,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                     width: 185,
                     alignment: Alignment.center,
                     child: Text(
-                      'HelpFerce@gmail.com',
+                      'HelpFaji@gmail.com',
                       style: TextStyle(
                           fontFamily: 'Urbanist',
                           fontSize: 18,
