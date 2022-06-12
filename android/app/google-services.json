@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1017790268193",
+    "project_id": "ferceapp",
+    "storage_bucket": "ferceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017790268193:android:a091f41335b8632a473460",
+        "android_client_info": {
+          "package_name": "com.example.ferce_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017790268193-tg5ngtjo0hu865e0bopp2b5fu19sumvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ferce_app",
+            "certificate_hash": "b74bedf2f0d669cd5403bb6758d0b9f4e8ea2d5d"
+          }
+        },
+        {
+          "client_id": "1017790268193-of4uoltaa4sr9ieu39l1m2t0oj6dqag2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu-mRGHffLdaNK3PLMrdSZFyWYdKV9nLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017790268193-of4uoltaa4sr9ieu39l1m2t0oj6dqag2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
