@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "341700186300",
+    "firebase_url": "https://faji-app-default-rtdb.firebaseio.com",
     "project_id": "faji-app",
     "storage_bucket": "faji-app.appspot.com"
   },
@@ -37,6 +38,13 @@
             {
               "client_id": "341700186300-g1ivgu67pqum8904a7p925d11al15791.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "341700186300-iih9loguhkjcmndj1p65koaklfevkrk2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ferceApp"
+              }
             }
           ]
         }

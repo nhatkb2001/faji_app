@@ -168,14 +168,10 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
         verificationId: verificationId,
         smsCode: phoneVerificationController.value.text);
     signInWithPhoneAuthCredential(phoneAuthCredential);
-    bool checkEmail = (emailAuth.validateOtp(
-        recipientMail: emailController.value.text,
-        userOtp: emailVerificationController.value.text));
-    if ((emailAuth.validateOtp(
-                recipientMail: emailController.value.text,
-                userOtp: emailVerificationController.value.text)) ==
-            true &&
-        checkPhone == true &&
+    // bool checkEmail = (emailAuth.validateOtp(
+    //     recipientMail: emailController.value.text,
+    //     userOtp: emailVerificationController.value.text));
+    if (checkPhone == true &&
         emailFormKey.currentState!.validate() &&
         usernameFormKey.currentState!.validate() &&
         // phoneNumberFormKey.currentState!.validate() &&
