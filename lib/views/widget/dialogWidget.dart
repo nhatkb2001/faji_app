@@ -7,7 +7,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 
 bool isChosedFemale = false;
 bool isChosedMale = false;

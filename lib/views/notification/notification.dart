@@ -1,4 +1,4 @@
-import 'package:ferce_app/constants/images.dart';
+import 'package:faji_app/constants/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
 
 ///add constants
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 
 class atNotificationScreen extends StatefulWidget {
   String uid;

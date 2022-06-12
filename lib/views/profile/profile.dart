@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/models/postModel.dart';
-import 'package:ferce_app/models/userModel.dart';
-import 'package:ferce_app/views/dashboard/createPost.dart';
-import 'package:ferce_app/views/profile/image.dart';
-import 'package:ferce_app/views/profile/personalInformation.dart';
-import 'package:ferce_app/views/profile/video.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/postModel.dart';
+import 'package:faji_app/models/userModel.dart';
+import 'package:faji_app/views/dashboard/createPost.dart';
+import 'package:faji_app/views/profile/image.dart';
+import 'package:faji_app/views/profile/personalInformation.dart';
+import 'package:faji_app/views/profile/video.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -22,7 +22,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'dart:math' as math;
 
 ///add constants
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';

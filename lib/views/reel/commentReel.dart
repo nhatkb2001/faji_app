@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/images.dart';
-import 'package:ferce_app/models/commentModel.dart';
-import 'package:ferce_app/models/commentReelModel.dart';
-import 'package:ferce_app/models/userModel.dart';
+import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/commentModel.dart';
+import 'package:faji_app/models/commentReelModel.dart';
+import 'package:faji_app/models/userModel.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
 
 ///add constants
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 import 'package:intl/intl.dart';
 
 class atCommentReelScreen extends StatefulWidget {

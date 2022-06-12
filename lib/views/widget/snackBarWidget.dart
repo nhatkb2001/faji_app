@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:iconsax/iconsax.dart';
 
-import 'package:ferce_app/constants/colors.dart';
+import 'package:faji_app/constants/colors.dart';
 
 void showSnackBar(context, text, category) {
   final snackBar = SnackBar(

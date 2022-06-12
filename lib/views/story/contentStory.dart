@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:chewie/chewie.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ferce_app/constants/colors.dart';
-import 'package:ferce_app/models/storyModel.dart';
-import 'package:ferce_app/models/userModel.dart';
-import 'package:ferce_app/views/reel/likeDoubleTap.dart';
-import 'package:ferce_app/views/reel/optionScreen.dart';
+import 'package:faji_app/constants/colors.dart';
+import 'package:faji_app/models/storyModel.dart';
+import 'package:faji_app/models/userModel.dart';
+import 'package:faji_app/views/reel/likeDoubleTap.dart';
+import 'package:faji_app/views/reel/optionScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
