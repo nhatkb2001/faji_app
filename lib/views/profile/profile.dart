@@ -596,7 +596,6 @@ class _atProfileScreen extends State<atProfileScreen>
                               shrinkWrap: true,
                               scrollDirection: Axis.horizontal,
                               itemCount: idFollowers.length,
-
                               // userList.length.clamp(0, 3),
                               itemBuilder: (context, index) {
                                 return followerWidget(

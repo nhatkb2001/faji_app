@@ -30,7 +30,7 @@ class _atStoryScreen extends State<atStoryScreen>
   String userId = '';
 
   List<storyModel> storiesList = [];
-  List videoList = [];
+  List<storyModel> videoList = [];
   List imageList = [];
   List ownerId = [];
   List storiesId = [];
@@ -46,16 +46,14 @@ class _atStoryScreen extends State<atStoryScreen>
         ownerId.clear();
         value.docs.forEach((element) {
           storiesList.add(storyModel.fromDocument(element.data()));
-          if (element.data()['urlVideo'] != '') {
-            videoList.add(element.data()['urlVideo']);
-            print("videoList");
-            print(videoList);
-          }
-          ownerId.add(element.data()['userId']);
-          storiesId.add(element.data()['id']);
         });
-        print("videoList");
-        print(videoList);
+        print(storiesList.length);
+        storiesList.forEach((element) {
+          if (element.urlVideo != '') {
+            videoList.add(element);
+          }
+        });
+        print(videoList.length);
       });
     });
   }
@@ -83,9 +81,9 @@ class _atStoryScreen extends State<atStoryScreen>
       body: Swiper(
         itemBuilder: (BuildContext context, int index) {
           return ContentStoryScreen(
-            src: videoList[index],
-            uid: ownerId[index],
-            storyId: storiesId[index],
+            src: videoList[index].urlVideo,
+            uid: videoList[index].idUser,
+            storyId: videoList[index].id,
           );
         },
         itemCount: videoList.length,

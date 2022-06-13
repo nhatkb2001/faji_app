@@ -72,52 +72,51 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
   Color notiColorPhoneNumber = red;
   Color notiColorPassword = red;
 
-  late Timer _timerEmail;
+  // late Timer _timerEmail;
 
-  void startTimerSendCodeEmail() {
-    const oneSec = const Duration(seconds: 1);
+  // void startTimerSendCodeEmail() {
+  //   const oneSec = const Duration(seconds: 1);
+  //   _timerEmail = new Timer.periodic(
+  //     oneSec,
+  //     (Timer timer) {
+  //       if (_startEmail == 0) {
+  //         setState(() {
+  //           timer.cancel();
+  //           isSendVerifyCodeEmail = false;
+  //           _startEmail = 30;
+  //           _enabledEmail = true;
+  //         });
+  //       } else {
+  //         setState(() {
+  //           _startEmail--;
+  //         });
+  //       }
+  //     },
+  //   );
+  // }
 
-    _timerEmail = new Timer.periodic(
-      oneSec,
-      (Timer timer) {
-        if (_startEmail == 0) {
-          setState(() {
-            timer.cancel();
-            isSendVerifyCodeEmail = false;
-            _startEmail = 30;
-            _enabledEmail = true;
-          });
-        } else {
-          setState(() {
-            _startEmail--;
-          });
-        }
-      },
-    );
-  }
+  // late Timer _timerPhonenumber;
 
-  late Timer _timerPhonenumber;
-
-  void startTimerSendCodePhone() {
-    const oneSec = const Duration(seconds: 1);
-    _timerPhonenumber = new Timer.periodic(
-      oneSec,
-      (Timer timer) {
-        if (_startPhone == 0) {
-          setState(() {
-            timer.cancel();
-            isSendVerifyCodePhone = false;
-            _startPhone = 30;
-            _enabledPhone = true;
-          });
-        } else {
-          setState(() {
-            _startPhone--;
-          });
-        }
-      },
-    );
-  }
+  // void startTimerSendCodePhone() {
+  //   const oneSec = const Duration(seconds: 1);
+  //   _timerPhonenumber = new Timer.periodic(
+  //     oneSec,
+  //     (Timer timer) {
+  //       if (_startPhone == 0) {
+  //         setState(() {
+  //           timer.cancel();
+  //           isSendVerifyCodePhone = false;
+  //           _startPhone = 60;
+  //           _enabledPhone = true;
+  //         });
+  //       } else {
+  //         setState(() {
+  //           _startPhone--;
+  //         });
+  //       }
+  //     },
+  //   );
+  // }
 
   late EmailAuth emailAuth;
 
@@ -198,8 +197,8 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
 
   @override
   void dispose() {
-    _timerPhonenumber.cancel();
-    _timerEmail.cancel();
+    // _timerPhonenumber.cancel();
+    // _timerEmail.cancel();
     super.dispose();
   }
 
@@ -402,7 +401,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           setState(() {
                                             isSendVerifyCodeEmail =
                                                 !isSendVerifyCodeEmail;
-                                            startTimerSendCodeEmail();
+                                            // startTimerSendCodeEmail();
                                             _enabledEmail = false;
                                             sendOtpEmail();
                                           });
@@ -611,7 +610,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                             _enabledPhone = false;
                                             isSendVerifyCodePhone =
                                                 !isSendVerifyCodePhone;
-                                            startTimerSendCodePhone();
+                                            // startTimerSendCodePhone();
                                             sendOtpPhone();
                                           });
                                         }

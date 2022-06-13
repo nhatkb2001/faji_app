@@ -102,7 +102,7 @@ class _ContentStoryScreenState extends State<ContentStoryScreen> {
   Future startTime() async {
     _timer = Timer.periodic(Duration(microseconds: 10), ((timer) {
       setState(() {
-        percent += 0.01;
+        percent += 0.001;
         if (percent > 1) {
           _timer.cancel();
           Navigator.pop(context);

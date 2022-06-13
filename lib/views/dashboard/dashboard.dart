@@ -7,6 +7,7 @@ import 'package:faji_app/models/postModel.dart';
 import 'package:faji_app/models/userModel.dart';
 import 'package:faji_app/views/dashboard/comment.dart';
 import 'package:faji_app/views/dashboard/createPost.dart';
+import 'package:faji_app/views/dashboard/createStory.dart';
 import 'package:faji_app/views/dashboard/postVideo.dart';
 import 'package:faji_app/views/message/messagesCenter.dart';
 import 'package:faji_app/views/profile/profile.dart';
@@ -111,7 +112,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
 
   late DateTime timeCreate = DateTime.now();
 
-  Future like(String postId, List likes) async {
+  Future like(String postId, List likes, String ownerId) async {
     if (likes.contains(uid)) {
       FirebaseFirestore.instance.collection('posts').doc(postId).update({
         'likes': FieldValue.arrayRemove([uid])
@@ -119,6 +120,24 @@ class _atDashboardScreen extends State<atDashboardScreen>
     } else {
       FirebaseFirestore.instance.collection('posts').doc(postId).update({
         'likes': FieldValue.arrayUnion([uid])
+      }).whenComplete(() {
+        if (uid != ownerId) {
+          FirebaseFirestore.instance.collection('notifies').add({
+            'idSender': uid,
+            'idReceiver': ownerId,
+            'avatarSender': user.avatar,
+            'mode': 'public',
+            'idPost': postId,
+            'content': 'liked your photo',
+            'category': 'like',
+            'nameSender': user.userName
+          }).then((value) {
+            FirebaseFirestore.instance
+                .collection('notifies')
+                .doc(value.id)
+                .update({'id': value.id});
+          });
+        }
       });
     }
   }
@@ -292,17 +311,29 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                             Container(
                                               padding: EdgeInsets.only(
                                                   top: 45, left: 45),
-                                              child: Container(
-                                                  width: 16,
-                                                  height: 16,
-                                                  decoration: BoxDecoration(
-                                                      color: white,
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                              Radius.circular(
-                                                                  16))),
-                                                  child: Icon(Iconsax.add,
-                                                      size: 14, color: gray)),
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: ((context) =>
+                                                              atCreateStoryScreen(
+                                                                required,
+                                                                uid: uid,
+                                                              ))));
+                                                },
+                                                child: Container(
+                                                    width: 16,
+                                                    height: 16,
+                                                    decoration: BoxDecoration(
+                                                        color: white,
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    16))),
+                                                    child: Icon(Iconsax.add,
+                                                        size: 14, color: gray)),
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -457,8 +488,10 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                         onPressed: () {
                                           setState(() {
                                             liked = !liked;
-                                            like(postList[index].id,
-                                                postList[index].likes);
+                                            like(
+                                                postList[index].id,
+                                                postList[index].likes,
+                                                postList[index].idUser);
                                           });
                                         },
                                         icon: (postList[index]
