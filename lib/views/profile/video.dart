@@ -81,19 +81,21 @@ class _VideoWidget extends State<VideoWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => postListView(
-                      position: widget.position, uid: widget.uid)));
-        },
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: Chewie(
-            controller: _chewieController,
-          ),
-        ));
+    return Container(
+      child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => postListView(
+                        position: widget.position, uid: widget.uid)));
+          },
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Chewie(
+              controller: _chewieController,
+            ),
+          )),
+    );
   }
 }

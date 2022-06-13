@@ -97,7 +97,11 @@ class _atProfileScreen extends State<atProfileScreen>
         .listen((value) {
       setState(() {
         user = userModel.fromDocument(value.docs.first.data());
-        idFollowers.add(user.follow);
+        if (user.favoriteList.isNotEmpty) {
+          setState(() {
+            idFollowers.add(user.favoriteList);
+          });
+        }
       });
     });
   }
@@ -105,16 +109,23 @@ class _atProfileScreen extends State<atProfileScreen>
   Future followEvent(List follow) async {
     if (follow.contains(ownerId)) {
       FirebaseFirestore.instance.collection('users').doc(userId).update({
-        'follow': FieldValue.arrayRemove([ownerId])
+        'follow': FieldValue.arrayRemove([ownerId]),
+      });
+      FirebaseFirestore.instance.collection('users').doc(ownerId).update({
+        'favoriteList': FieldValue.arrayRemove([userId])
       });
     } else {
       FirebaseFirestore.instance.collection('users').doc(userId).update({
         'follow': FieldValue.arrayUnion([ownerId])
       });
+      FirebaseFirestore.instance.collection('users').doc(ownerId).update({
+        'favoriteList': FieldValue.arrayUnion([userId])
+      });
     }
   }
 
   late List<postModel> postList = [];
+  late List<postModel> postListImage = [];
   Future getPostList() async {
     FirebaseFirestore.instance
         .collection('posts')
@@ -129,6 +140,8 @@ class _atProfileScreen extends State<atProfileScreen>
         postList.forEach((element) {
           if (element.urlVideo != '') {
             postVideoList.add(element);
+          } else {
+            postListImage.add(element);
           }
         });
       });
@@ -140,6 +153,7 @@ class _atProfileScreen extends State<atProfileScreen>
   bool followed = false;
   final pageViewcontroller =
       PageController(initialPage: 0, keepPage: true, viewportFraction: 1);
+
   TabController? _tabController;
 
   Future storeNotificationToken() async {
@@ -178,7 +192,7 @@ class _atProfileScreen extends State<atProfileScreen>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: AnnotatedRegion(
         value: SystemUiOverlayStyle(
             statusBarBrightness: Brightness.dark,
@@ -219,6 +233,7 @@ class _atProfileScreen extends State<atProfileScreen>
                   Container(
                     margin: EdgeInsets.only(left: 24, right: 24),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(height: 20 + 186),
                         Container(
@@ -354,7 +369,7 @@ class _atProfileScreen extends State<atProfileScreen>
                           children: [
                             Container(
                               alignment: Alignment.topLeft,
-                              child: Text(user.userName,
+                              child: Text(owner.userName,
                                   style: TextStyle(
                                       fontFamily: 'Poppins',
                                       fontSize: 20,
@@ -440,7 +455,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                     Container(
                                       child: Text(
                                         (postList.length == 0)
-                                            ? ''
+                                            ? '0'
                                             : postList.length.toString(),
                                         style: TextStyle(
                                           fontSize: 20,
@@ -472,9 +487,10 @@ class _atProfileScreen extends State<atProfileScreen>
                                   children: [
                                     Container(
                                       child: Text(
-                                        (owner.follow.length == 0)
-                                            ? ''
-                                            : owner.follow.length.toString(),
+                                        (owner.favoriteList.length == 0)
+                                            ? '0'
+                                            : owner.favoriteList.length
+                                                .toString(),
                                         style: TextStyle(
                                           fontSize: 20,
                                           fontFamily: 'Poppins',
@@ -506,7 +522,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                     Container(
                                       child: Text(
                                         (owner.follow.length == 0)
-                                            ? ''
+                                            ? '0'
                                             : owner.follow.length.toString(),
                                         style: TextStyle(
                                           fontSize: 20,
@@ -589,7 +605,7 @@ class _atProfileScreen extends State<atProfileScreen>
                         SizedBox(height: 16),
                         Container(
                           // width: 367,
-                          height: 72,
+                          height: 72 + 8,
                           child: ListView.builder(
                               padding: EdgeInsets.only(left: 0),
                               physics: const AlwaysScrollableScrollPhysics(),
@@ -635,7 +651,7 @@ class _atProfileScreen extends State<atProfileScreen>
                               physics: const AlwaysScrollableScrollPhysics(),
                               shrinkWrap: true,
                               scrollDirection: Axis.horizontal,
-                              itemCount: 5,
+                              itemCount: postListImage.length,
                               // userList.length.clamp(0, 3),
                               itemBuilder: (context, index) {
                                 return Row(
@@ -652,7 +668,8 @@ class _atProfileScreen extends State<atProfileScreen>
                                               image: NetworkImage(
                                                   // userList[index]
                                                   //     .avatar
-                                                  'https://i.imgur.com/bCnExb4.jpg'),
+                                                  postListImage[index]
+                                                      .urlImage),
                                               fit: BoxFit.cover),
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(8)),
@@ -947,10 +964,6 @@ class _atProfileScreen extends State<atProfileScreen>
                                     color: black, size: 24),
                               ),
                               Tab(
-                                icon: Icon(Iconsax.video_play,
-                                    color: black, size: 24),
-                              ),
-                              Tab(
                                 icon: Icon(Iconsax.save_2,
                                     color: black, size: 24),
                               )
@@ -964,7 +977,6 @@ class _atProfileScreen extends State<atProfileScreen>
                         children: [
                           profileTabPostScreen(postList),
                           profileTabVideoScreen(postVideoList),
-                          profileTabReelScreen(postList),
                           profileTabPostScreen(postList),
                         ],
                       ))

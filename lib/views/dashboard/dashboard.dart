@@ -130,7 +130,8 @@ class _atDashboardScreen extends State<atDashboardScreen>
             'idPost': postId,
             'content': 'liked your photo',
             'category': 'like',
-            'nameSender': user.userName
+            'nameSender': user.userName,
+            'timeCreate': "${DateFormat('hh:mm a').format(DateTime.now())}"
           }).then((value) {
             FirebaseFirestore.instance
                 .collection('notifies')
@@ -350,49 +351,50 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                     ),
                                   )
                                 : Container(
-                                    child: Column(
-                                      children: [
-                                        Stack(
-                                          children: [
-                                            Container(
-                                                width: 56,
-                                                height: 56,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                      color: blue,
-                                                      width: 1.5,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                            Radius.circular(
-                                                                8)))),
-                                            Container(
-                                              padding: EdgeInsets.all(4),
-                                              child: ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(4),
-                                                child: Image.network(
-                                                  'https://i.imgur.com/eYOEUb7.jpg',
-                                                  width: 48,
-                                                  height: 48,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(height: 8),
-                                        Container(
-                                            child: Text(
-                                          'Pan',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w500,
-                                              color: black),
-                                        ))
-                                      ],
-                                    ),
-                                  ));
+                                    // child:
+                                    // Column(
+                                    //   children: [
+                                    //     Stack(
+                                    //       children: [
+                                    //         Container(
+                                    //             width: 56,
+                                    //             height: 56,
+                                    //             decoration: BoxDecoration(
+                                    //                 border: Border.all(
+                                    //                   color: blue,
+                                    //                   width: 1.5,
+                                    //                 ),
+                                    //                 borderRadius:
+                                    //                     BorderRadius.all(
+                                    //                         Radius.circular(
+                                    //                             8)))),
+                                    //         Container(
+                                    //           padding: EdgeInsets.all(4),
+                                    //           child: ClipRRect(
+                                    //             borderRadius:
+                                    //                 BorderRadius.circular(4),
+                                    //             child: Image.network(
+                                    //               'https://i.imgur.com/eYOEUb7.jpg',
+                                    //               width: 48,
+                                    //               height: 48,
+                                    //             ),
+                                    //           ),
+                                    //         ),
+                                    //       ],
+                                    //     ),
+                                    //     SizedBox(height: 8),
+                                    //     Container(
+                                    //         child: Text(
+                                    //       'Pan',
+                                    //       style: TextStyle(
+                                    //           fontSize: 12,
+                                    //           fontFamily: 'Poppins',
+                                    //           fontWeight: FontWeight.w500,
+                                    //           color: black),
+                                    //     ))
+                                    //   ],
+                                    // ),
+                                    ));
                       })),
               Container(
                   margin: EdgeInsets.only(

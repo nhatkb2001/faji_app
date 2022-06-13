@@ -95,7 +95,7 @@ class _postListView extends State<postListView> {
               ),
               Container(
                   margin: EdgeInsets.only(
-                      top: 32 + 24 + 16, left: 16, right: 16, bottom: 56),
+                      top: 32 + 24 + 16, left: 16, right: 16, bottom: 16),
                   child: ListView.separated(
                       shrinkWrap: true,
                       controller: _scrollController,

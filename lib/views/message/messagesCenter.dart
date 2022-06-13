@@ -40,7 +40,9 @@ class _messsageScreenState extends State<messsageScreen> {
         userList.forEach((element) {
           print(element.id);
           if (element.id == uid) {
-            userList.remove(element);
+            setState(() {
+              userList.remove(element);
+            });
           }
         });
         print(userList);
@@ -240,46 +242,7 @@ class _messsageScreenState extends State<messsageScreen> {
                       Spacer(),
                       Container(
                           // padding: EdgeInsets.only(right: 28),
-                          alignment: Alignment.center,
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      atNotificationScreen(required, uid: uid),
-                                ),
-                              ).then((value) {});
-                            },
-                            child: AnimatedContainer(
-                              alignment: Alignment.center,
-                              duration: Duration(milliseconds: 300),
-                              height: 32,
-                              width: 32,
-                              decoration: BoxDecoration(
-                                color: black,
-                                borderRadius: BorderRadius.circular(8),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: black.withOpacity(0.25),
-                                      spreadRadius: 0,
-                                      blurRadius: 64,
-                                      offset: Offset(8, 8)),
-                                  BoxShadow(
-                                    color: black.withOpacity(0.2),
-                                    spreadRadius: 0,
-                                    blurRadius: 4,
-                                    offset: Offset(0, 4),
-                                  ),
-                                ],
-                              ),
-                              child: Container(
-                                  padding: EdgeInsets.zero,
-                                  alignment: Alignment.center,
-                                  child: Icon(Iconsax.notification,
-                                      size: 18, color: white)),
-                            ),
-                          )),
+                          ),
                     ],
                   ),
                 ),

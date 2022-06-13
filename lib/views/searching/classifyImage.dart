@@ -338,6 +338,8 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                                 ),
                           SizedBox(height: 24),
                           Container(
+                            width: 327 + 24,
+                            height: 400,
                             padding: EdgeInsets.only(left: 24, right: 24),
                             child: GridView.custom(
                               shrinkWrap: true,

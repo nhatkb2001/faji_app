@@ -267,7 +267,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  height: 640 - 31,
+                  height: 700,
                   decoration: BoxDecoration(
                       color: white,
                       borderRadius: BorderRadius.only(
@@ -279,7 +279,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                            height: 518,
+                            height: 530,
                             child: SingleChildScrollView(
                                 scrollDirection: Axis.vertical,
                                 child: Column(
@@ -446,7 +446,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                                     ),
                                   ],
                                 ))),
-                        SizedBox(height: 24),
+                        SizedBox(height: 100),
                         Container(
                           height: 54,
                           width: 319,

@@ -164,12 +164,15 @@ class _atSearchScreen extends State<atSearchScreen>
                 ),
                 SizedBox(height: 24),
                 Container(
+                    width: 327 + 24,
+                    height: 400,
                     padding: EdgeInsets.only(left: 24, right: 24),
-                    child: ListView.builder(
-                      padding: EdgeInsets.only(left: 0),
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
+                    child: GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        mainAxisSpacing: 6,
+                        crossAxisSpacing: 6,
+                      ),
                       itemCount: postList.length,
                       // userList.length.clamp(0, 3),
                       itemBuilder: (context, index) {
@@ -177,17 +180,21 @@ class _atSearchScreen extends State<atSearchScreen>
                         //     ? Container()
                         //     :
                         return (postList[index].urlImage != '')
-                            ? ImageWidget(
-                                src: postList[index].urlImage,
-                                postId: postList[index].id,
-                                uid: uid,
-                                position: index.toString(),
+                            ? Container(
+                                child: ImageWidget(
+                                  src: postList[index].urlImage,
+                                  postId: postList[index].id,
+                                  uid: uid,
+                                  position: index.toString(),
+                                ),
                               )
-                            : VideoWidget(
-                                src: postList[index].urlVideo,
-                                postId: postList[index].id,
-                                uid: uid,
-                                position: index.toString(),
+                            : Container(
+                                child: VideoWidget(
+                                  src: postList[index].urlVideo,
+                                  postId: postList[index].id,
+                                  uid: uid,
+                                  position: index.toString(),
+                                ),
                               );
                       },
                     )),

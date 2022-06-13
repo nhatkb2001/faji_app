@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/notifyModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -19,9 +21,31 @@ class atNotificationScreen extends StatefulWidget {
 
 class _atNotificationScreen extends State<atNotificationScreen>
     with SingleTickerProviderStateMixin {
+  List<notifyModel> notifyList = [];
+
+  Future getNotifiesList() async {
+    print(widget.uid);
+    FirebaseFirestore.instance
+        .collection("notifies")
+        // .orderBy('timeCreate', descending: true)
+        .where('idReceiver', isEqualTo: widget.uid)
+        .snapshots()
+        .listen((value) {
+      setState(() {
+        notifyList.clear();
+        value.docs.forEach((element) {
+          notifyList.add(notifyModel.fromDocument(element.data()));
+        });
+        print("notifyList.length");
+        print(notifyList.length);
+      });
+    });
+  }
+
   @override
   void initState() {
     super.initState();
+    getNotifiesList();
   }
 
   @override
@@ -109,7 +133,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
                               scrollDirection: Axis.vertical,
                               padding: EdgeInsets.only(top: 8),
                               shrinkWrap: true,
-                              itemCount: 4,
+                              itemCount: notifyList.length,
                               itemBuilder: (context, index) {
                                 return Container(
                                     width: 327 + 24,
@@ -137,7 +161,12 @@ class _atNotificationScreen extends State<atNotificationScreen>
                                                   image: NetworkImage(
                                                       // userList[index]
                                                       //     .avatar
-                                                      'https://i.imgur.com/bCnExb4.jpg'),
+                                                      (notifyList[index]
+                                                                  .avatarSender !=
+                                                              '')
+                                                          ? notifyList[index]
+                                                              .avatarSender
+                                                          : 'https://i.imgur.com/RUgPziD.jpg'),
                                                   fit: BoxFit.cover),
                                             ),
                                           ),
@@ -158,10 +187,10 @@ class _atNotificationScreen extends State<atNotificationScreen>
                                                           fontWeight:
                                                               FontWeight.w300,
                                                         ),
-                                                        children: const <
-                                                            TextSpan>[
+                                                        children: <TextSpan>[
                                                       TextSpan(
-                                                        text: 'pan_chao ',
+                                                        text: notifyList[index]
+                                                            .nameSender,
                                                         style: TextStyle(
                                                           color: blue,
                                                           fontWeight:
@@ -169,8 +198,9 @@ class _atNotificationScreen extends State<atNotificationScreen>
                                                         ),
                                                       ),
                                                       TextSpan(
-                                                        text:
-                                                            'liked your photo. ',
+                                                        text: " " +
+                                                            notifyList[index]
+                                                                .content,
                                                         style: TextStyle(
                                                           color: gray,
                                                           fontWeight:
@@ -183,7 +213,9 @@ class _atNotificationScreen extends State<atNotificationScreen>
                                                       EdgeInsets.only(top: 8),
                                                   alignment: Alignment.topLeft,
                                                   child: Text(
-                                                    'Today, at 3:15 AM',
+                                                    'Today, at ' +
+                                                        notifyList[index]
+                                                            .timeCreate,
                                                     style: TextStyle(
                                                         fontFamily: 'Urbanist',
                                                         fontSize: 12,
