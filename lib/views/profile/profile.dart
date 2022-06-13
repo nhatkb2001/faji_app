@@ -2,9 +2,11 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/firebase/firebaseAuth.dart';
 import 'package:faji_app/models/postModel.dart';
 import 'package:faji_app/models/userModel.dart';
 import 'package:faji_app/views/dashboard/createPost.dart';
+import 'package:faji_app/views/profile/followerWidget.dart';
 import 'package:faji_app/views/profile/image.dart';
 import 'package:faji_app/views/profile/personalInformation.dart';
 import 'package:faji_app/views/profile/video.dart';
@@ -86,6 +88,7 @@ class _atProfileScreen extends State<atProfileScreen>
     });
   }
 
+  List idFollowers = [];
   Future getUserDetail() async {
     FirebaseFirestore.instance
         .collection("users")
@@ -94,7 +97,7 @@ class _atProfileScreen extends State<atProfileScreen>
         .listen((value) {
       setState(() {
         user = userModel.fromDocument(value.docs.first.data());
-        print(user.userName);
+        idFollowers.add(user.follow);
       });
     });
   }
@@ -335,10 +338,10 @@ class _atProfileScreen extends State<atProfileScreen>
                                         ),
                                         GestureDetector(
                                           onTap: () {
-                                            print('tap option');
+                                            signOut(context);
                                           },
                                           child: Container(
-                                              child: Icon(Iconsax.more,
+                                              child: Icon(Iconsax.logout,
                                                   size: 24, color: black)),
                                         ),
                                       ],
@@ -592,44 +595,12 @@ class _atProfileScreen extends State<atProfileScreen>
                               physics: const AlwaysScrollableScrollPhysics(),
                               shrinkWrap: true,
                               scrollDirection: Axis.horizontal,
-                              itemCount: 7,
+                              itemCount: idFollowers.length,
+
                               // userList.length.clamp(0, 3),
                               itemBuilder: (context, index) {
-                                return Stack(
-                                  children: [
-                                    Container(
-                                      margin:
-                                          EdgeInsets.only(left: 0, right: 16),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            width: 48,
-                                            height: 48,
-                                            decoration: new BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      // userList[index]
-                                                      //     .avatar
-                                                      'https://i.imgur.com/bCnExb4.jpg'),
-                                                  fit: BoxFit.cover),
-                                              shape: BoxShape.circle,
-                                            ),
-                                          ),
-                                          SizedBox(height: 8),
-                                          Text(
-                                            "Peter",
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontFamily: 'Urbanist',
-                                              fontWeight: FontWeight.w400,
-                                              color: black,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                );
+                                return followerWidget(
+                                    uid: idFollowers[index].toString());
                               }),
                         ),
                         SizedBox(height: 24),
@@ -993,8 +964,8 @@ class _atProfileScreen extends State<atProfileScreen>
                         controller: _tabController,
                         children: [
                           profileTabPostScreen(postList),
-                          profileTabPostScreen(postVideoList),
-                          profileTabPostScreen(postList),
+                          profileTabVideoScreen(postVideoList),
+                          profileTabReelScreen(postList),
                           profileTabPostScreen(postList),
                         ],
                       ))
@@ -1060,6 +1031,50 @@ class _atProfileScreen extends State<atProfileScreen>
           },
           childCount: postList.length,
         ),
+      ),
+    );
+  }
+
+  profileTabVideoScreen(List postList) {
+    return Container(
+      padding: EdgeInsets.only(left: 24, right: 24),
+      child: GridView.builder(
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        itemCount: postList.length,
+        itemBuilder: (context, index) {
+          // (postList.length == 0)
+          //     ? Container()
+          //     :
+          return VideoWidget(
+            src: postList[index].urlVideo,
+            postId: postList[index].id,
+            uid: userId,
+            position: index.toString(),
+          );
+        },
+      ),
+    );
+  }
+
+  profileTabReelScreen(List postList) {
+    return Container(
+      padding: EdgeInsets.only(left: 24, right: 24),
+      child: GridView.builder(
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        itemCount: postList.length,
+        itemBuilder: (context, index) {
+          // (postList.length == 0)
+          //     ? Container()
+          //     :
+          return VideoWidget(
+            src: postList[index].urlVideo,
+            postId: postList[index].id,
+            uid: userId,
+            position: index.toString(),
+          );
+        },
       ),
     );
   }

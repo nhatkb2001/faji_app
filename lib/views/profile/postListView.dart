@@ -55,11 +55,20 @@ class _postListView extends State<postListView> {
     }
   }
 
+  late ScrollController _scrollController = ScrollController(
+      initialScrollOffset: double.parse(widget.position.toString()));
+
   @override
   void initState() {
     getPostList();
     print(widget.position.toString());
     super.initState();
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        // _scrollController.jumpTo(double.parse(widget.position.toString()));
+        _scrollController.jumpTo(_scrollController.position.minScrollExtent);
+      }
+    });
   }
 
   @override
@@ -89,6 +98,7 @@ class _postListView extends State<postListView> {
                       top: 32 + 24 + 16, left: 16, right: 16, bottom: 56),
                   child: ListView.separated(
                       shrinkWrap: true,
+                      controller: _scrollController,
                       padding: EdgeInsets.zero,
                       scrollDirection: Axis.vertical,
                       separatorBuilder: (BuildContext context, int index) =>

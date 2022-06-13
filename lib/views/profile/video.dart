@@ -1,5 +1,6 @@
 import 'package:chewie/chewie.dart';
 import 'package:faji_app/constants/colors.dart';
+import 'package:faji_app/views/profile/postListView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
@@ -82,13 +83,11 @@ class _VideoWidget extends State<VideoWidget> {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          setState(() {
-            if (_videoPlayerController.value.isPlaying) {
-              _videoPlayerController.pause();
-            } else {
-              _videoPlayerController.play();
-            }
-          });
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => postListView(
+                      position: widget.position, uid: widget.uid)));
         },
         child: ClipRRect(
           borderRadius: BorderRadius.circular(16),

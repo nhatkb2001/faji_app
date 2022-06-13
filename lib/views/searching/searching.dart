@@ -2,8 +2,11 @@ import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/postModel.dart';
 import 'package:faji_app/models/userModel.dart';
+import 'package:faji_app/views/profile/image.dart';
 import 'package:faji_app/views/profile/profile.dart';
+import 'package:faji_app/views/profile/video.dart';
 import 'package:faji_app/views/searching/classifyImage.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -52,6 +55,19 @@ class _atSearchScreen extends State<atSearchScreen>
     });
   }
 
+  late List<postModel> postList = [];
+  Future getPostList() async {
+    FirebaseFirestore.instance.collection('posts').snapshots().listen((value) {
+      setState(() {
+        postList.clear();
+        value.docs.forEach((element) {
+          postList.add(postModel.fromDocument(element.data()));
+        });
+        postList.forEach((element) {});
+      });
+    });
+  }
+
   File? imageFile;
   String link = '';
 
@@ -59,6 +75,7 @@ class _atSearchScreen extends State<atSearchScreen>
 
   @override
   void initState() {
+    getPostList();
     super.initState();
   }
 
@@ -118,7 +135,9 @@ class _atSearchScreen extends State<atSearchScreen>
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              atClassifyImageScreen()));
+                                              atClassifyImageScreen(
+                                                uid: uid,
+                                              )));
                                 },
                                 child: Stack(
                                     alignment: Alignment.center,
@@ -146,55 +165,52 @@ class _atSearchScreen extends State<atSearchScreen>
                 ),
                 SizedBox(height: 24),
                 Container(
-                  child: ListView.separated(
-                      shrinkWrap: true,
-                      padding: EdgeInsets.zero,
-                      scrollDirection: Axis.vertical,
-                      separatorBuilder: (BuildContext context, int index) =>
-                          SizedBox(height: 16),
-                      itemCount: userList.length,
-                      itemBuilder: (context, index) {
-                        return Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => atProfileScreen(
-                                            required,
-                                            ownerId: userList[index].id)));
-                              },
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(4),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8),
-                                      child: Image.network(
-                                        userList[index].avatar,
-                                        width: 40,
-                                        height: 40,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(width: 8),
-                                  Container(
-                                      child: Text(
-                                    userList[index].userName,
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontFamily: 'Urbanist',
-                                        fontWeight: FontWeight.w600,
-                                        color: black),
-                                  ))
-                                ],
-                              ),
-                            ),
-                          ],
-                        );
-                      }),
+                  padding: EdgeInsets.only(left: 24, right: 24),
+                  child: GridView.custom(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    gridDelegate: (postList.length >= 4)
+                        ? SliverQuiltedGridDelegate(
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 6,
+                            crossAxisSpacing: 6,
+                            repeatPattern: QuiltedGridRepeatPattern.inverted,
+                            pattern: [
+                              QuiltedGridTile(2, 1),
+                              QuiltedGridTile(1, 1),
+                              QuiltedGridTile(1, 1),
+                              QuiltedGridTile(1, 2),
+                            ],
+                          )
+                        : SliverQuiltedGridDelegate(
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 6,
+                            crossAxisSpacing: 6,
+                            repeatPattern: QuiltedGridRepeatPattern.inverted,
+                            pattern: [QuiltedGridTile(1, 1)],
+                          ),
+                    childrenDelegate: SliverChildBuilderDelegate(
+                      (context, index) {
+                        // (postList.length == 0)
+                        //     ? Container()
+                        //     :
+                        return (postList[index].urlImage != '')
+                            ? ImageWidget(
+                                src: postList[index].urlImage,
+                                postId: postList[index].id,
+                                uid: uid,
+                                position: index.toString(),
+                              )
+                            : VideoWidget(
+                                src: postList[index].urlVideo,
+                                postId: postList[index].id,
+                                uid: uid,
+                                position: index.toString(),
+                              );
+                      },
+                      childCount: postList.length,
+                    ),
+                  ),
                 )
               ],
             ),

@@ -33,13 +33,20 @@ class _messsageScreenState extends State<messsageScreen> {
   Future getAllUser() async {
     FirebaseFirestore.instance.collection("users").get().then((value) {
       setState(() {
+        userList.clear();
         value.docs.forEach((element) {
           userList.add(userModel.fromDocument(element.data()));
         });
-        userList.removeAt(userList.length - 1);
+        userList.forEach((element) {
+          print(element.id);
+          if (element.id == uid) {
+            userList.remove(element);
+          }
+        });
         print(userList);
       });
     });
+    setState(() {});
   }
 
   late userModel currentUser = userModel(

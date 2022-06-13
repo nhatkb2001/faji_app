@@ -81,8 +81,8 @@ class _atCreatePostScreen extends State<atCreatePostScreen>
             ref.putFile(File(result.files.first.path.toString()));
         Reference ref_2 =
             await FirebaseStorage.instance.ref().child('uploads/$fileName');
-
-        link = (await ref_2.getDownloadURL()).toString();
+        print((await ref_2.getDownloadURL()).toString());
+        link = await (await ref_2.getDownloadURL()).toString();
 
         print(result.files.first.path.toString());
         if (result.files.first.name.contains('.mp4')) {
@@ -315,19 +315,22 @@ class _atCreatePostScreen extends State<atCreatePostScreen>
                                           ),
                                         )
                                       : postVideoWidget(context, src: urlVideo))
-                                  : Container(
-                                      width: 360,
-                                      height: 340,
-                                      padding:
-                                          EdgeInsets.only(top: 24, bottom: 16),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(16),
-                                        child: Image.network(
-                                          urlImage,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    )
+                                  : (urlImage != '')
+                                      ? Container(
+                                          width: 360,
+                                          height: 340,
+                                          padding: EdgeInsets.only(
+                                              top: 24, bottom: 16),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(16),
+                                            child: Image.network(
+                                              urlImage,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        )
+                                      : Container()
                             ],
                           ),
                           SizedBox(height: 16),
