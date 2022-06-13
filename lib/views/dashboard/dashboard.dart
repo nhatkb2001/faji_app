@@ -9,6 +9,7 @@ import 'package:faji_app/views/dashboard/comment.dart';
 import 'package:faji_app/views/dashboard/createPost.dart';
 import 'package:faji_app/views/dashboard/postVideo.dart';
 import 'package:faji_app/views/message/messagesCenter.dart';
+import 'package:faji_app/views/profile/profile.dart';
 import 'package:faji_app/views/story/storyScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -386,7 +387,15 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     GestureDetector(
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: ((context) =>
+                                                    atProfileScreen(required,
+                                                        ownerId: postList[index]
+                                                            .idUser))));
+                                      },
                                       child: Row(
                                         children: [
                                           Container(

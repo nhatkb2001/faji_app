@@ -127,13 +127,13 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                       size: 28, color: black),
                                 ),
                                 Spacer(),
-                                GestureDetector(
-                                  onTap: () {
-                                    print('more');
-                                  },
-                                  child: Icon(Iconsax.menu_1,
-                                      size: 28, color: black),
-                                )
+                                // GestureDetector(
+                                //   onTap: () {
+                                //     print('more');
+                                //   },
+                                //   child: Icon(Iconsax.menu_1,
+                                //       size: 28, color: black),
+                                // )
                               ],
                             ),
                           ),

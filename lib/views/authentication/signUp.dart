@@ -6,6 +6,7 @@ import 'package:faji_app/views/authentication/signIn.dart';
 import 'package:faji_app/views/widget/snackBarWidget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/painting.dart';
@@ -123,9 +124,11 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
   void sendOtpEmail() async {
     bool result = await emailAuth.sendOtp(
         recipientMail: emailController.value.text, otpLength: 4);
+    print(result);
     if (result) {
       setState(() {
         submitValid = true;
+        print(submitValid);
       });
     }
   }
@@ -164,18 +167,19 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
   }
 
   void controlSignUp() {
-    PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.credential(
-        verificationId: verificationId,
-        smsCode: phoneVerificationController.value.text);
-    signInWithPhoneAuthCredential(phoneAuthCredential);
+    // PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.credential(
+    //     verificationId: verificationId,
+    //     smsCode: phoneVerificationController.value.text);
+    // signInWithPhoneAuthCredential(phoneAuthCredential);
     // bool checkEmail = (emailAuth.validateOtp(
     //     recipientMail: emailController.value.text,
     //     userOtp: emailVerificationController.value.text));
-    if (checkPhone == true &&
+    if (
+        // checkPhone == true &&
         emailFormKey.currentState!.validate() &&
-        usernameFormKey.currentState!.validate() &&
-        // phoneNumberFormKey.currentState!.validate() &&
-        passwordFormKey.currentState!.validate()) {
+            usernameFormKey.currentState!.validate() &&
+            // phoneNumberFormKey.currentState!.validate() &&
+            passwordFormKey.currentState!.validate()) {
       registerUser(emailController.text, passwordController.text,
           usernameController.text, phoneNumberController.text, context);
     } else {

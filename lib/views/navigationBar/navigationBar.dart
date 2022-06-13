@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:faji_app/models/userModel.dart';
 import 'package:faji_app/views/dashboard/dashboard.dart';
 import 'package:faji_app/views/notification/notification.dart';
 import 'package:faji_app/views/profile/profile.dart';
@@ -26,6 +28,33 @@ class _navigationBar extends State<navigationBar>
 
   _navigationBar(uid);
   TabController? _tabController;
+  late userModel user = userModel(
+      avatar: '',
+      background: '',
+      email: '',
+      favoriteList: [],
+      fullName: '',
+      id: '',
+      phoneNumber: '',
+      saveList: [],
+      state: '',
+      userName: '',
+      follow: [],
+      role: '',
+      gender: '',
+      dob: '');
+
+  Future getUserDetail() async {
+    FirebaseFirestore.instance
+        .collection("users")
+        .where("userId", isEqualTo: uid)
+        .snapshots()
+        .listen((value) {
+      setState(() {
+        user = userModel.fromDocument(value.docs.first.data());
+      });
+    });
+  }
 
   @override
   void initState() {
@@ -34,6 +63,7 @@ class _navigationBar extends State<navigationBar>
     User? user = FirebaseAuth.instance.currentUser;
     final userid = user?.uid.toString();
     uid = userid!;
+    getUserDetail();
   }
 
   @override
@@ -119,7 +149,10 @@ class _navigationBar extends State<navigationBar>
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(4),
                         child: Image.network(
-                          'https://i.imgur.com/bCnExb4.jpg',
+                          (user.avatar == '')
+                              ? 'https://i.imgur.com/RUgPziD.jpg'
+                              : user.avatar,
+                          fit: BoxFit.cover,
                         ),
                       )),
                 ),

@@ -1,4 +1,6 @@
 // import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:faji_app/models/contentMessageModel.dart';
+import 'package:faji_app/views/authentication/signIn.dart';
 import 'package:faji_app/views/dashboard/dashboard.dart';
 import 'package:faji_app/views/navigationBar/navigationBar.dart';
 import 'package:faji_app/views/widget/snackBarWidget.dart';
@@ -121,9 +123,12 @@ Future signIn(String email, String password, context) async {
 }
 
 //Sign-out
-signOut() async {
+signOut(context) async {
   FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  await _firebaseAuth.signOut();
+  await _firebaseAuth.signOut().then((value) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => signInScreen()));
+  });
 }
 
   // //changePassword

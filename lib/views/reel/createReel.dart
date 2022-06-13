@@ -82,7 +82,7 @@ class _atCreateReelScreen extends State<atCreateReelScreen>
         Reference ref_2 =
             await FirebaseStorage.instance.ref().child('uploads/$fileName');
 
-        link = (await ref_2.getDownloadURL()).toString();
+        link = await (await ref_2.getDownloadURL()).toString();
 
         print(result.files.first.path.toString());
         if (result.files.first.name.contains('.mp4')) {

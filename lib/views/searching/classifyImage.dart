@@ -4,15 +4,19 @@ import 'dart:typed_data';
 import 'package:chewie/chewie.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:faji_app/constants/images.dart';
+import 'package:faji_app/models/postModel.dart';
 import 'package:faji_app/models/userModel.dart';
 import 'package:faji_app/views/dashboard/postVideo.dart';
+import 'package:faji_app/views/profile/image.dart';
 import 'package:faji_app/views/profile/profile.dart';
+import 'package:faji_app/views/profile/video.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:file_picker/file_picker.dart';
@@ -24,43 +28,47 @@ import 'package:faji_app/constants/colors.dart';
 import 'package:tflite/tflite.dart';
 
 class atClassifyImageScreen extends StatefulWidget {
-  atClassifyImageScreen({
-    Key? key,
-  }) : super(key: key);
+  String uid;
+  atClassifyImageScreen({Key? key, required this.uid}) : super(key: key);
 
   @override
-  _atClassifyImageScreen createState() => _atClassifyImageScreen();
+  _atClassifyImageScreen createState() => _atClassifyImageScreen(this.uid);
 }
 
 class _atClassifyImageScreen extends State<atClassifyImageScreen>
     with SingleTickerProviderStateMixin {
-  _atClassifyImageScreen();
+  String uid = '';
+  _atClassifyImageScreen(this.uid);
   String imageFile = '';
   String link = '';
 
   TextEditingController captionController = TextEditingController();
   final GlobalKey<FormState> captionFormKey = GlobalKey<FormState>();
 
-  List<userModel> userList = [];
-  List<userModel> userListName = [];
+  List<postModel> postList = [];
+  List<postModel> postListCaption = [];
   Future searchUserName() async {
-    FirebaseFirestore.instance.collection("users").snapshots().listen((value) {
+    FirebaseFirestore.instance.collection("posts").snapshots().listen((value) {
       setState(() {
-        userListName.clear();
-        userList.clear();
+        postListCaption.clear();
+        postList.clear();
         value.docs.forEach((element) {
-          userListName.add(userModel.fromDocument(element.data()));
-        });
-        userListName.forEach((element) {
-          print(element.userName.toUpperCase());
-          print(search.toUpperCase());
-          if (element.userName.toUpperCase() + ' ' == search.toUpperCase()) {
-            userList.add(element);
-            print(element.userName.toUpperCase() + ' ' == search.toUpperCase());
-          }
+          postListCaption.add(postModel.fromDocument(element.data()));
         });
 
-        if (userList.isEmpty) {
+        postListCaption.forEach((element) {
+          print(
+              (element.caption.toUpperCase().contains(search.toUpperCase())) ==
+                  true);
+          if (((element.caption + " ")
+                  .toUpperCase()
+                  .contains(search.toUpperCase())) ==
+              true) {
+            postList.add(element);
+            print(postList.length);
+          }
+        });
+        if (postList.isEmpty) {
           setState(() {
             resultError = 'PLease choose an image regarding to clothes!';
           });
@@ -332,74 +340,56 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                                   ),
                                 ),
                           SizedBox(height: 24),
-                          (userList.length != 0)
-                              ? Container(
-                                  child: ListView.separated(
-                                      shrinkWrap: true,
-                                      padding: EdgeInsets.zero,
-                                      scrollDirection: Axis.vertical,
-                                      separatorBuilder:
-                                          (BuildContext context, int index) =>
-                                              SizedBox(height: 16),
-                                      itemCount: userList.length,
-                                      itemBuilder: (context, index) {
-                                        return Column(
-                                          children: [
-                                            GestureDetector(
-                                              onTap: () {
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            atProfileScreen(
-                                                                required,
-                                                                ownerId: userList[
-                                                                        index]
-                                                                    .id)));
-                                              },
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                children: [
-                                                  Container(
-                                                    padding: EdgeInsets.all(4),
-                                                    child: ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8),
-                                                      child: Image.network(
-                                                        userList[index].avatar,
-                                                        width: 40,
-                                                        height: 40,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  SizedBox(width: 8),
-                                                  Container(
-                                                      child: Text(
-                                                    userList[index].userName,
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        fontFamily: 'Urbanist',
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: black),
-                                                  ))
-                                                ],
-                                              ),
-                                            ),
-                                          ],
+                          Container(
+                            padding: EdgeInsets.only(left: 24, right: 24),
+                            child: GridView.custom(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              gridDelegate: (postList.length >= 4)
+                                  ? SliverQuiltedGridDelegate(
+                                      crossAxisCount: 3,
+                                      mainAxisSpacing: 6,
+                                      crossAxisSpacing: 6,
+                                      repeatPattern:
+                                          QuiltedGridRepeatPattern.inverted,
+                                      pattern: [
+                                        QuiltedGridTile(2, 1),
+                                        QuiltedGridTile(1, 1),
+                                        QuiltedGridTile(1, 1),
+                                        QuiltedGridTile(1, 2),
+                                      ],
+                                    )
+                                  : SliverQuiltedGridDelegate(
+                                      crossAxisCount: 3,
+                                      mainAxisSpacing: 6,
+                                      crossAxisSpacing: 6,
+                                      repeatPattern:
+                                          QuiltedGridRepeatPattern.inverted,
+                                      pattern: [QuiltedGridTile(1, 1)],
+                                    ),
+                              childrenDelegate: SliverChildBuilderDelegate(
+                                (context, index) {
+                                  // (postList.length == 0)
+                                  //     ? Container()
+                                  //     :
+                                  return (postList[index].urlImage != '')
+                                      ? ImageWidget(
+                                          src: postList[index].urlImage,
+                                          postId: postList[index].id,
+                                          uid: uid,
+                                          position: index.toString(),
+                                        )
+                                      : VideoWidget(
+                                          src: postList[index].urlVideo,
+                                          postId: postList[index].id,
+                                          uid: uid,
+                                          position: index.toString(),
                                         );
-                                      }),
-                                )
-                              : Container(
-                                  child: Text(resultError,
-                                      style: const TextStyle(
-                                          fontFamily: 'Urbanist',
-                                          fontSize: 16,
-                                          color: black,
-                                          fontWeight: FontWeight.w500)),
-                                )
+                                },
+                                childCount: postList.length,
+                              ),
+                            ),
+                          )
                         ]))
                       ]))))
         ])));
