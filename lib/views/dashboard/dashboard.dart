@@ -152,8 +152,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
             children: [
               Container(
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(profileBackground), fit: BoxFit.cover),
+                  color: white,
                 ),
               ),
               Container(
@@ -170,7 +169,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                           fontFamily: 'Recoleta',
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
-                          color: black,
+                          color: blue,
                         ),
                       ),
                     ),
@@ -257,7 +256,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                                 height: 56,
                                                 decoration: BoxDecoration(
                                                     border: Border.all(
-                                                      color: black,
+                                                      color: blue,
                                                       width: 1.5,
                                                     ),
                                                     borderRadius:
@@ -329,7 +328,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                                 height: 56,
                                                 decoration: BoxDecoration(
                                                     border: Border.all(
-                                                      color: black,
+                                                      color: blue,
                                                       width: 1.5,
                                                     ),
                                                     borderRadius:
@@ -418,7 +417,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                                 fontSize: 16,
                                                 fontFamily: 'Urbanist',
                                                 fontWeight: FontWeight.w600,
-                                                color: black),
+                                                color: blue),
                                           ))
                                         ],
                                       ),
@@ -574,7 +573,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                       postList[index].caption,
                                       style: TextStyle(
                                           fontSize: 16,
-                                          color: black,
+                                          color: blue,
                                           fontFamily: 'Urbanist',
                                           fontWeight: FontWeight.w600,
                                           overflow: TextOverflow.ellipsis),

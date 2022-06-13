@@ -126,8 +126,7 @@ class _atCommentScreen extends State<atCommentScreen>
             body: Stack(children: [
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(profileBackground), fit: BoxFit.cover),
+              color: Colors.white,
             ),
           ),
           SingleChildScrollView(

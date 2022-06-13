@@ -231,7 +231,7 @@ class _messsageScreenState extends State<messsageScreen> {
                                 style: TextStyle(
                                     fontSize: 18,
                                     fontFamily: 'Recoleta',
-                                    color: black,
+                                    color: blue,
                                     fontWeight: FontWeight.w600,
                                     height: 1.2),
                               )),
@@ -291,7 +291,7 @@ class _messsageScreenState extends State<messsageScreen> {
                     style: TextStyle(
                         fontFamily: "Recoleta",
                         fontSize: 24.0,
-                        color: black,
+                        color: blue,
                         fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -506,7 +506,7 @@ class _messsageScreenState extends State<messsageScreen> {
                                                     style: TextStyle(
                                                         fontFamily: "Urbanist",
                                                         fontSize: 14.0,
-                                                        color: black,
+                                                        color: blue,
                                                         fontWeight:
                                                             FontWeight.w700,
                                                         height: 1.4),

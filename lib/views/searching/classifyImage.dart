@@ -201,10 +201,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
         child: Scaffold(
             body: Stack(children: [
           Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(profileBackground), fit: BoxFit.cover),
-            ),
+            color: white,
           ),
           SingleChildScrollView(
               scrollDirection: Axis.vertical,

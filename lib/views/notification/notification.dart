@@ -40,8 +40,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
             body: Stack(children: [
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(profileBackground), fit: BoxFit.cover),
+              color: white,
             ),
           ),
           SingleChildScrollView(

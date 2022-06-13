@@ -95,8 +95,7 @@ class _atSearchScreen extends State<atSearchScreen>
             body: Stack(children: [
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(profileBackground), fit: BoxFit.cover),
+              color: white,
             ),
           ),
           Container(
@@ -157,7 +156,7 @@ class _atSearchScreen extends State<atSearchScreen>
                             hintStyle: TextStyle(
                                 fontFamily: 'Urbanist',
                                 fontSize: 14,
-                                color: gray,
+                                color: blue,
                                 fontWeight: FontWeight.w400),
                           )),
                     ),
