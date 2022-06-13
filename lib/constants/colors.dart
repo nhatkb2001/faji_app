@@ -10,3 +10,4 @@ const Color pink = Color(0xFFe5b6ab);
 
 const Color red = Colors.red;
 const Color green = Colors.green;
+const Color blue = Colors.lightBlue;

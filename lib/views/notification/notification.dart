@@ -40,8 +40,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
             body: Stack(children: [
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(profileBackground), fit: BoxFit.cover),
+              color: white,
             ),
           ),
           SingleChildScrollView(
@@ -100,7 +99,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
                             style: TextStyle(
                                 fontFamily: 'Urbanist',
                                 fontSize: 16,
-                                color: gray,
+                                color: blue,
                                 fontWeight: FontWeight.w400),
                           ),
                         ),
@@ -164,7 +163,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
                                                       TextSpan(
                                                         text: 'pan_chao ',
                                                         style: TextStyle(
-                                                          color: black,
+                                                          color: blue,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),
@@ -209,7 +208,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
                             style: TextStyle(
                                 fontFamily: 'Urbanist',
                                 fontSize: 16,
-                                color: gray,
+                                color: blue,
                                 fontWeight: FontWeight.w400),
                           ),
                         ),
@@ -274,7 +273,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
                                                       TextSpan(
                                                         text: 'pan_chao ',
                                                         style: TextStyle(
-                                                          color: black,
+                                                          color: blue,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),

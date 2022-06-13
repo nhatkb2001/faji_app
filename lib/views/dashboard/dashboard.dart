@@ -171,8 +171,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
             children: [
               Container(
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(profileBackground), fit: BoxFit.cover),
+                  color: white,
                 ),
               ),
               Container(
@@ -186,10 +185,10 @@ class _atDashboardScreen extends State<atDashboardScreen>
                       child: Text(
                         user.userName,
                         style: TextStyle(
-                          fontFamily: 'Recoleta',
+                          fontFamily: 'Poppins',
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
-                          color: black,
+                          color: blue,
                         ),
                       ),
                     ),
@@ -254,7 +253,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
               // SizedBox(height: 32),
               Container(
                   margin: EdgeInsets.only(top: 88, left: 16),
-                  height: 78,
+                  height: 78 + 24,
                   width: 375,
                   child: ListView.separated(
                       shrinkWrap: true,
@@ -276,7 +275,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                                 height: 56,
                                                 decoration: BoxDecoration(
                                                     border: Border.all(
-                                                      color: black,
+                                                      color: blue,
                                                       width: 1.5,
                                                     ),
                                                     borderRadius:
@@ -343,7 +342,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                           'Your Story',
                                           style: TextStyle(
                                               fontSize: 12,
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w500,
                                               color: black),
                                         ))
@@ -360,7 +359,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                                 height: 56,
                                                 decoration: BoxDecoration(
                                                     border: Border.all(
-                                                      color: black,
+                                                      color: blue,
                                                       width: 1.5,
                                                     ),
                                                     borderRadius:
@@ -387,7 +386,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                           'Pan',
                                           style: TextStyle(
                                               fontSize: 12,
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w500,
                                               color: black),
                                         ))
@@ -447,9 +446,9 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                             postList[index].ownerUsername,
                                             style: TextStyle(
                                                 fontSize: 16,
-                                                fontFamily: 'Urbanist',
+                                                fontFamily: 'Poppins',
                                                 fontWeight: FontWeight.w600,
-                                                color: black),
+                                                color: blue),
                                           ))
                                         ],
                                       ),
@@ -528,7 +527,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                             style: TextStyle(
                                               fontSize: 16,
                                               color: black,
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w600,
                                             ),
                                           )),
@@ -560,7 +559,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                     //       style: TextStyle(
                                     //         fontSize: 16,
                                     //         color: black,
-                                    //         fontFamily: 'Urbanist',
+                                    //         fontFamily: 'Poppins',
                                     //         fontWeight: FontWeight.w600,
                                     //       ),
                                     //     )),
@@ -607,8 +606,8 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                       postList[index].caption,
                                       style: TextStyle(
                                           fontSize: 16,
-                                          color: black,
-                                          fontFamily: 'Urbanist',
+                                          color: blue,
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w600,
                                           overflow: TextOverflow.ellipsis),
                                       maxLines: 1,
@@ -623,7 +622,7 @@ class _atDashboardScreen extends State<atDashboardScreen>
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: gray,
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontWeight: FontWeight.w600,
                                     ),
                                   )),

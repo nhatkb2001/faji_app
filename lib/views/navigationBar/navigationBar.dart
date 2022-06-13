@@ -99,7 +99,7 @@ class _navigationBar extends State<navigationBar>
         //     right: (MediaQuery.of(context).size.width - 375 + 24) / 2),
         child: ClipRRect(
           child: Container(
-            color: black,
+            color: blue,
             child: TabBar(
               labelColor: white,
               unselectedLabelColor: white,

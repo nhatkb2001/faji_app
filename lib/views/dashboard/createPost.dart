@@ -226,8 +226,7 @@ class _atCreatePostScreen extends State<atCreatePostScreen>
             body: Stack(children: [
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(profileBackground), fit: BoxFit.cover),
+              color: white,
             ),
           ),
           SingleChildScrollView(
@@ -265,7 +264,7 @@ class _atCreatePostScreen extends State<atCreatePostScreen>
                             child: Text(
                               'Create Post',
                               style: TextStyle(
-                                  fontFamily: 'Recoleta',
+                                  fontFamily: 'Poppins',
                                   fontSize: 32,
                                   fontWeight: FontWeight.w500,
                                   color: black),
@@ -339,7 +338,7 @@ class _atCreatePostScreen extends State<atCreatePostScreen>
                             child: Text(
                               'Caption: ',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -360,7 +359,7 @@ class _atCreatePostScreen extends State<atCreatePostScreen>
                               alignment: Alignment.topCenter,
                               child: TextFormField(
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 16,
                                       color: black,
                                       fontWeight: FontWeight.w400),
@@ -390,7 +389,7 @@ class _atCreatePostScreen extends State<atCreatePostScreen>
                                     contentPadding:
                                         EdgeInsets.only(left: 16, right: 16),
                                     hintStyle: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400,
                                         color: black.withOpacity(0.5)),

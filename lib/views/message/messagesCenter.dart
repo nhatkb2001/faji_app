@@ -230,8 +230,8 @@ class _messsageScreenState extends State<messsageScreen> {
                                 currentUser.userName,
                                 style: TextStyle(
                                     fontSize: 18,
-                                    fontFamily: 'Recoleta',
-                                    color: black,
+                                    fontFamily: 'Poppins',
+                                    color: blue,
                                     fontWeight: FontWeight.w600,
                                     height: 1.2),
                               )),
@@ -289,9 +289,9 @@ class _messsageScreenState extends State<messsageScreen> {
                   child: Text(
                     "Messages",
                     style: TextStyle(
-                        fontFamily: "Recoleta",
+                        fontFamily: "Poppins",
                         fontSize: 24.0,
-                        color: black,
+                        color: blue,
                         fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -504,9 +504,9 @@ class _messsageScreenState extends State<messsageScreen> {
                                                         TextOverflow.ellipsis,
                                                     maxLines: 1,
                                                     style: TextStyle(
-                                                        fontFamily: "Urbanist",
+                                                        fontFamily: "Poppins",
                                                         fontSize: 14.0,
-                                                        color: black,
+                                                        color: blue,
                                                         fontWeight:
                                                             FontWeight.w700,
                                                         height: 1.4),
@@ -520,7 +520,7 @@ class _messsageScreenState extends State<messsageScreen> {
                                                       TextOverflow.ellipsis,
                                                   maxLines: 1,
                                                   style: TextStyle(
-                                                      fontFamily: "Urbanist",
+                                                      fontFamily: "Poppins",
                                                       fontSize: 12.0,
                                                       color: black,
                                                       fontWeight:
@@ -536,7 +536,7 @@ class _messsageScreenState extends State<messsageScreen> {
                                                 overflow: TextOverflow.ellipsis,
                                                 maxLines: 1,
                                                 style: TextStyle(
-                                                    fontFamily: "Urbanist",
+                                                    fontFamily: "Poppins",
                                                     fontSize: 12.0,
                                                     color: black,
                                                     fontWeight:

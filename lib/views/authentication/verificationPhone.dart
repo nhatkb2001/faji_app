@@ -64,7 +64,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                     child: Text(
                       'You need to enter OTP Code, new password and authenticate them to mutate!',
                       style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 16,
                           fontWeight: FontWeight.w300,
                           color: black),
@@ -81,7 +81,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                           child: Text(
                             'Phone Number',
                             style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 color: black,
                                 fontWeight: FontWeight.w500),
@@ -105,7 +105,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                                 alignment: Alignment.topLeft,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: white,
                                         fontWeight: FontWeight.w400),
@@ -117,7 +117,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -186,7 +186,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                     child: Text(
                       'Enter OTP Code',
                       style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 18,
                           color: black,
                           fontWeight: FontWeight.w600),
@@ -213,7 +213,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                           child: Text(
                             'Password',
                             style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 color: black,
                                 fontWeight: FontWeight.w500),
@@ -237,7 +237,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                                 alignment: Alignment.topLeft,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -249,7 +249,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -322,7 +322,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                           child: Text(
                             'Confirm Password',
                             style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 color: black,
                                 fontWeight: FontWeight.w500),
@@ -346,7 +346,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                                 alignment: Alignment.topLeft,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -358,7 +358,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -437,7 +437,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                           "Authenticate",
                           style: TextStyle(
                             color: white,
-                            fontFamily: 'Urbanist',
+                            fontFamily: 'Poppins',
                             fontSize: 18,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w600,
@@ -464,7 +464,7 @@ class _verificationPhoneScreen extends State<verificationPhoneScreen> {
                           "Cancel",
                           style: TextStyle(
                             color: black,
-                            fontFamily: 'Urbanist',
+                            fontFamily: 'Poppins',
                             fontSize: 18,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w600,
@@ -507,7 +507,7 @@ class OtpInput extends StatelessWidget {
         style: TextStyle(
             color: black,
             fontSize: 18,
-            fontFamily: 'Urbanist',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w500),
         onChanged: (value) {
           if (value.length == 1) {

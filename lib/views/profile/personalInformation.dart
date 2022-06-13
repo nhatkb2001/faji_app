@@ -143,7 +143,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                             child: Text(
                               'Personal Information',
                               style: TextStyle(
-                                  fontFamily: 'Recoleta',
+                                  fontFamily: 'Poppins',
                                   fontSize: 32,
                                   fontWeight: FontWeight.w500,
                                   color: black),
@@ -179,7 +179,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                             child: Text(
                               'Email',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -202,7 +202,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                               alignment: Alignment.topCenter,
                               child: TextFormField(
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 16,
                                       color: black,
                                       fontWeight: FontWeight.w400),
@@ -233,7 +233,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                     contentPadding:
                                         EdgeInsets.only(left: 20, right: 12),
                                     hintStyle: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400,
                                         color: black.withOpacity(0.5)),
@@ -258,7 +258,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                             child: Text(
                               'Phone Number',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -280,7 +280,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                               alignment: Alignment.topCenter,
                               child: TextFormField(
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 16,
                                       color: black,
                                       fontWeight: FontWeight.w400),
@@ -311,7 +311,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                     contentPadding:
                                         EdgeInsets.only(left: 20, right: 12),
                                     hintStyle: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400,
                                         color: black.withOpacity(0.5)),
@@ -336,7 +336,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                             child: Text(
                               'Gender',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -358,7 +358,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                               alignment: Alignment.topCenter,
                               child: TextFormField(
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 16,
                                       color: black,
                                       fontWeight: FontWeight.w400),
@@ -399,7 +399,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                       ),
                                     ),
                                     hintStyle: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400,
                                         color: black.withOpacity(0.5)),
@@ -424,7 +424,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                             child: Text(
                               'Date of Birth',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -447,7 +447,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                               alignment: Alignment.topCenter,
                               child: TextFormField(
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 16,
                                       color: black,
                                       fontWeight: FontWeight.w400),
@@ -479,7 +479,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                               size: 24, color: black)),
                                     ),
                                     hintStyle: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400,
                                         color: black.withOpacity(0.5)),
@@ -504,7 +504,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                             child: Text(
                               'Address',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -553,7 +553,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                                             '01',
                                                             style: TextStyle(
                                                                 fontFamily:
-                                                                    'Urbanist',
+                                                                    'Poppins',
                                                                 fontSize: 16,
                                                                 color: white,
                                                                 fontWeight:
@@ -600,7 +600,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                                                 TextAlign.left,
                                                             style: TextStyle(
                                                                 fontFamily:
-                                                                    "Urbanist",
+                                                                    "Poppins",
                                                                 fontSize: 16.0,
                                                                 color: white,
                                                                 fontWeight:
@@ -643,7 +643,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                                                     .toString(),
                                                             style: TextStyle(
                                                                 fontFamily:
-                                                                    'Urbanist',
+                                                                    'Poppins',
                                                                 fontSize: 16,
                                                                 color: white,
                                                                 fontWeight:
@@ -692,7 +692,7 @@ class _atPersonalInformationScreen extends State<atPersonalInformationScreen> {
                                                                 TextAlign.left,
                                                             style: TextStyle(
                                                                 fontFamily:
-                                                                    "Urbanist",
+                                                                    "Poppins",
                                                                 fontSize: 16.0,
                                                                 color: black,
                                                                 fontWeight:

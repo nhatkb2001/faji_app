@@ -71,7 +71,7 @@ class _forgotPasswordScreen extends State<forgotPasswordScreen> {
                       child: Text(
                         'Forgot Password!',
                         style: TextStyle(
-                          fontFamily: 'Recoleta',
+                          fontFamily: 'Poppins',
                           fontSize: 32,
                           fontWeight: FontWeight.w500,
                           color: black,
@@ -85,7 +85,7 @@ class _forgotPasswordScreen extends State<forgotPasswordScreen> {
                       child: Text(
                         'Please enter the email address associated with your account. We will email you a link have OTP code to reset your password.',
                         style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 16,
                           fontWeight: FontWeight.w300,
                           color: black,
@@ -99,7 +99,7 @@ class _forgotPasswordScreen extends State<forgotPasswordScreen> {
                       child: Text(
                         'Email / Phone Number',
                         style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           color: black,
@@ -122,7 +122,7 @@ class _forgotPasswordScreen extends State<forgotPasswordScreen> {
                         ),
                         child: TextFormField(
                             style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 color: black,
                                 fontWeight: FontWeight.w400),
@@ -133,7 +133,7 @@ class _forgotPasswordScreen extends State<forgotPasswordScreen> {
                               contentPadding:
                                   EdgeInsets.only(left: 20, right: 12),
                               hintStyle: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   color: black.withOpacity(0.5)),
@@ -166,7 +166,7 @@ class _forgotPasswordScreen extends State<forgotPasswordScreen> {
                         child: Text(
                           'Instruction Manual',
                           style: TextStyle(
-                            fontFamily: 'Urbanist',
+                            fontFamily: 'Poppins',
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: black,
@@ -207,7 +207,7 @@ class _forgotPasswordScreen extends State<forgotPasswordScreen> {
                             "Send",
                             style: TextStyle(
                               color: white,
-                              fontFamily: 'Urbanist',
+                              fontFamily: 'Poppins',
                               fontSize: 18,
                               fontStyle: FontStyle.normal,
                               fontWeight: FontWeight.w600,

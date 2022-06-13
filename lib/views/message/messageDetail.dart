@@ -259,7 +259,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                   child: Text(
                     user.userName,
                     style: TextStyle(
-                        fontFamily: "Recoleta",
+                        fontFamily: "Poppins",
                         fontSize: 24.0,
                         color: black,
                         fontWeight: FontWeight.w600),
@@ -313,7 +313,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                                                               .createAt,
                                                           style: TextStyle(
                                                               fontFamily:
-                                                                  "Urbanist",
+                                                                  "Poppins",
                                                               fontSize: 10.0,
                                                               color: gray,
                                                               fontWeight:
@@ -353,7 +353,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                                                                 .message,
                                                             style: TextStyle(
                                                                 fontFamily:
-                                                                    "Urbanist",
+                                                                    "Poppins",
                                                                 fontSize: 12.0,
                                                                 color: white,
                                                                 fontWeight:
@@ -418,7 +418,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                                                                 TextAlign.left,
                                                             style: TextStyle(
                                                                 fontFamily:
-                                                                    "Urbanist",
+                                                                    "Poppins",
                                                                 fontSize: 12.0,
                                                                 color: black,
                                                                 fontWeight:
@@ -432,7 +432,7 @@ class _messageDetailScreenState extends State<messageDetailScreen> {
                                                               .createAt,
                                                           style: TextStyle(
                                                               fontFamily:
-                                                                  "Urbanist",
+                                                                  "Poppins",
                                                               fontSize: 10.0,
                                                               color: gray,
                                                               fontWeight:

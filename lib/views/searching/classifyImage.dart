@@ -135,7 +135,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
             title: Text(
               "Choose Resource",
               style: TextStyle(
-                  fontFamily: 'Recoleta',
+                  fontFamily: 'Poppins',
                   fontSize: 32,
                   fontWeight: FontWeight.w500,
                   color: black),
@@ -145,7 +145,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                 child: Text(
                   "Photo with Camera",
                   style: TextStyle(
-                      fontFamily: 'Recoleta',
+                      fontFamily: 'Poppins',
                       fontSize: 32,
                       fontWeight: FontWeight.w500,
                       color: black),
@@ -156,7 +156,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                 child: Text(
                   "Photo with Gallery",
                   style: TextStyle(
-                      fontFamily: 'Recoleta',
+                      fontFamily: 'Poppins',
                       fontSize: 32,
                       fontWeight: FontWeight.w500,
                       color: black),
@@ -167,7 +167,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                 child: Text(
                   "Cancel",
                   style: TextStyle(
-                      fontFamily: 'Recoleta',
+                      fontFamily: 'Poppins',
                       fontSize: 32,
                       fontWeight: FontWeight.w500,
                       color: black),
@@ -201,10 +201,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
         child: Scaffold(
             body: Stack(children: [
           Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(profileBackground), fit: BoxFit.cover),
-            ),
+            color: white,
           ),
           SingleChildScrollView(
               scrollDirection: Axis.vertical,
@@ -241,7 +238,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                             child: Text(
                               'Classify',
                               style: TextStyle(
-                                  fontFamily: 'Recoleta',
+                                  fontFamily: 'Poppins',
                                   fontSize: 32,
                                   fontWeight: FontWeight.w500,
                                   color: black),
@@ -310,7 +307,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                             child: Text(
                               'Classify: ',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -330,7 +327,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                                           margin: EdgeInsets.all(10),
                                           child: Text("${result['label']} ",
                                               style: const TextStyle(
-                                                  fontFamily: 'Urbanist',
+                                                  fontFamily: 'Poppins',
                                                   fontSize: 16,
                                                   color: black,
                                                   fontWeight: FontWeight.w500)),

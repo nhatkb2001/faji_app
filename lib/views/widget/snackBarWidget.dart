@@ -23,7 +23,7 @@ void showSnackBar(context, text, category) {
             child: Text(
               text,
               style: TextStyle(
-                  fontFamily: 'Urbanist',
+                  fontFamily: 'Poppins',
                   color: black,
                   fontWeight: FontWeight.w600,
                   fontSize: 12),

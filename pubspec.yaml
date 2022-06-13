@@ -106,4 +106,26 @@ flutter:
         - asset: assets/fonts/Urbanist/Urbanist-Black.ttf
           style: normal
           weight: 900
-   
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Thin.ttf
+          style: normal
+          weight: 100
+        - asset: assets/fonts/Poppins/Poppins-Light.ttf
+          style: normal
+          weight: 300
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+          style: normal
+          weight: 400
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+          style: normal
+          weight: 500
+        - asset: assets/fonts/Poppins/Poppins-SemiBold.ttf
+          style: normal
+          weight: 600
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+          style: normal
+          weight: 700
+        - asset: assets/fonts/Poppins/Poppins-Black.ttf
+          style: normal
+          weight: 900
