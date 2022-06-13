@@ -165,32 +165,15 @@ class _atSearchScreen extends State<atSearchScreen>
                 ),
                 SizedBox(height: 24),
                 Container(
-                  padding: EdgeInsets.only(left: 24, right: 24),
-                  child: GridView.custom(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.vertical,
-                    gridDelegate: (postList.length >= 4)
-                        ? SliverQuiltedGridDelegate(
-                            crossAxisCount: 3,
-                            mainAxisSpacing: 6,
-                            crossAxisSpacing: 6,
-                            repeatPattern: QuiltedGridRepeatPattern.inverted,
-                            pattern: [
-                              QuiltedGridTile(2, 1),
-                              QuiltedGridTile(1, 1),
-                              QuiltedGridTile(1, 1),
-                              QuiltedGridTile(1, 2),
-                            ],
-                          )
-                        : SliverQuiltedGridDelegate(
-                            crossAxisCount: 3,
-                            mainAxisSpacing: 6,
-                            crossAxisSpacing: 6,
-                            repeatPattern: QuiltedGridRepeatPattern.inverted,
-                            pattern: [QuiltedGridTile(1, 1)],
-                          ),
-                    childrenDelegate: SliverChildBuilderDelegate(
-                      (context, index) {
+                    padding: EdgeInsets.only(left: 24, right: 24),
+                    child: ListView.builder(
+                      padding: EdgeInsets.only(left: 0),
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: postList.length,
+                      // userList.length.clamp(0, 3),
+                      itemBuilder: (context, index) {
                         // (postList.length == 0)
                         //     ? Container()
                         //     :
@@ -208,10 +191,7 @@ class _atSearchScreen extends State<atSearchScreen>
                                 position: index.toString(),
                               );
                       },
-                      childCount: postList.length,
-                    ),
-                  ),
-                )
+                    )),
               ],
             ),
           )

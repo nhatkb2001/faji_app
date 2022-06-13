@@ -344,7 +344,7 @@ class _atClassifyImageScreen extends State<atClassifyImageScreen>
                             padding: EdgeInsets.only(left: 24, right: 24),
                             child: GridView.custom(
                               shrinkWrap: true,
-                              scrollDirection: Axis.vertical,
+                              scrollDirection: Axis.horizontal,
                               gridDelegate: (postList.length >= 4)
                                   ? SliverQuiltedGridDelegate(
                                       crossAxisCount: 3,
