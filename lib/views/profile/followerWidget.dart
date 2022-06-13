@@ -56,7 +56,7 @@ class _followerWidgetState extends State<followerWidget> {
                 "Peter",
                 style: TextStyle(
                   fontSize: 12,
-                  fontFamily: 'Urbanist',
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,
                   color: black,
                 ),

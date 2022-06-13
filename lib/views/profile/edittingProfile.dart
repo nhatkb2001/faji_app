@@ -107,7 +107,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                               child: Text(
                                 'Editing Profile',
                                 style: TextStyle(
-                                    fontFamily: 'Recoleta',
+                                    fontFamily: 'Poppins',
                                     fontSize: 32,
                                     fontWeight: FontWeight.w500,
                                     color: black),
@@ -178,7 +178,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                               child: Text(
                                 'User Name',
                                 style: TextStyle(
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     color: black,
                                     fontWeight: FontWeight.w500),
@@ -201,7 +201,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                 alignment: Alignment.topCenter,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -232,7 +232,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                       contentPadding:
                                           EdgeInsets.only(left: 16, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -258,7 +258,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                               child: Text(
                                 'Website',
                                 style: TextStyle(
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     color: black,
                                     fontWeight: FontWeight.w500),
@@ -280,7 +280,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                 alignment: Alignment.topCenter,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -311,7 +311,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -337,7 +337,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                               child: Text(
                                 'Biography',
                                 style: TextStyle(
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     color: black,
                                     fontWeight: FontWeight.w500),
@@ -359,7 +359,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                 alignment: Alignment.topCenter,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -390,7 +390,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -488,7 +488,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                               "Please Wait...",
                                               style: TextStyle(
                                                 fontSize: 18,
-                                                fontFamily: 'Urbanist',
+                                                fontFamily: 'Poppins',
                                                 fontWeight: FontWeight.w600,
                                                 color: white,
                                               ),
@@ -502,7 +502,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                           'Save',
                                           style: TextStyle(
                                             fontSize: 18,
-                                            fontFamily: 'Urbanist',
+                                            fontFamily: 'Poppins',
                                             fontWeight: FontWeight.w600,
                                             color: white,
                                           ),
@@ -529,7 +529,7 @@ class _atEditProfileScreen extends State<atEditProfileScreen>
                                     'Cancel',
                                     style: TextStyle(
                                       fontSize: 18,
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontWeight: FontWeight.w600,
                                       color: black,
                                     ),

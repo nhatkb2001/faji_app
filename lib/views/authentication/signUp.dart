@@ -238,7 +238,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                 Text(
                   'Sign up!',
                   style: TextStyle(
-                      fontFamily: 'Recoleta',
+                      fontFamily: 'Poppins',
                       fontSize: 32,
                       fontWeight: FontWeight.w500,
                       color: black),
@@ -250,7 +250,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                     'Only one step left to be part of the Faji' +
                         's World community!',
                     style: TextStyle(
-                        fontFamily: 'Urbanist',
+                        fontFamily: 'Poppins',
                         fontSize: 16,
                         fontWeight: FontWeight.w300,
                         color: black),
@@ -289,7 +289,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                               "personal information",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 color: gray,
                                 fontSize: 14,
                                 fontStyle: FontStyle.normal,
@@ -319,7 +319,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                               "Email",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 color: black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -345,7 +345,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     alignment: Alignment.topLeft,
                                     child: TextFormField(
                                         style: TextStyle(
-                                            fontFamily: 'Urbanist',
+                                            fontFamily: 'Poppins',
                                             fontSize: 16,
                                             color: black,
                                             fontWeight: FontWeight.w400),
@@ -375,7 +375,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           contentPadding: EdgeInsets.only(
                                               left: 20, right: 12),
                                           hintStyle: TextStyle(
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               color: black.withOpacity(0.5)),
@@ -434,7 +434,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                             child: Text('$_startEmail',
                                                 style: TextStyle(
                                                     fontSize: 18,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     color: white,
                                                     fontWeight:
                                                         FontWeight.w500)),
@@ -447,7 +447,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                               child: Text(
                                 'User name',
                                 style: TextStyle(
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     fontSize: 16,
                                     color: black,
                                     fontWeight: FontWeight.w500),
@@ -468,7 +468,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                 ),
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -499,7 +499,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -524,7 +524,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                               "Phone number",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 color: black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -550,7 +550,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     alignment: Alignment.topLeft,
                                     child: TextFormField(
                                         style: TextStyle(
-                                            fontFamily: 'Urbanist',
+                                            fontFamily: 'Poppins',
                                             fontSize: 16,
                                             color: black,
                                             fontWeight: FontWeight.w400),
@@ -583,7 +583,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           contentPadding: EdgeInsets.only(
                                               left: 20, right: 12),
                                           hintStyle: TextStyle(
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               color: black.withOpacity(0.5)),
@@ -642,7 +642,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                             child: Text('$_startPhone',
                                                 style: TextStyle(
                                                     fontSize: 18,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     color: white,
                                                     fontWeight:
                                                         FontWeight.w500)),
@@ -661,7 +661,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     child: Text(
                                       'Password',
                                       style: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           color: black,
                                           fontWeight: FontWeight.w500),
@@ -686,7 +686,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           alignment: Alignment.topLeft,
                                           child: TextFormField(
                                               style: TextStyle(
-                                                  fontFamily: 'Urbanist',
+                                                  fontFamily: 'Poppins',
                                                   fontSize: 16,
                                                   color: black,
                                                   fontWeight: FontWeight.w400),
@@ -723,7 +723,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                                 contentPadding: EdgeInsets.only(
                                                     left: 20, right: 12),
                                                 hintStyle: TextStyle(
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color:
@@ -803,7 +803,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     child: Text(
                                       'Confirm Password',
                                       style: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           color: black,
                                           fontWeight: FontWeight.w500),
@@ -828,7 +828,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           alignment: Alignment.topLeft,
                                           child: TextFormField(
                                               style: TextStyle(
-                                                  fontFamily: 'Urbanist',
+                                                  fontFamily: 'Poppins',
                                                   fontSize: 16,
                                                   color: black,
                                                   fontWeight: FontWeight.w400),
@@ -845,7 +845,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                                 contentPadding: EdgeInsets.only(
                                                     left: 20, right: 12),
                                                 hintStyle: TextStyle(
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color:
@@ -935,7 +935,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     "authentication",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       color: gray,
                                       fontSize: 14,
                                       fontStyle: FontStyle.normal,
@@ -966,7 +966,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     child: Text(
                                       'Email Verification',
                                       style: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           color: black,
                                           fontWeight: FontWeight.w500),
@@ -991,7 +991,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           alignment: Alignment.topLeft,
                                           child: TextFormField(
                                               style: TextStyle(
-                                                  fontFamily: 'Urbanist',
+                                                  fontFamily: 'Poppins',
                                                   fontSize: 16,
                                                   color: black,
                                                   fontWeight: FontWeight.w400),
@@ -1007,7 +1007,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                                 contentPadding: EdgeInsets.only(
                                                     left: 20, right: 12),
                                                 hintStyle: TextStyle(
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color:
@@ -1088,7 +1088,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     child: Text(
                                       'Phone Number Verificatiion',
                                       style: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           color: black,
                                           fontWeight: FontWeight.w500),
@@ -1113,7 +1113,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           alignment: Alignment.topLeft,
                                           child: TextFormField(
                                               style: TextStyle(
-                                                  fontFamily: 'Urbanist',
+                                                  fontFamily: 'Poppins',
                                                   fontSize: 16,
                                                   color: black,
                                                   fontWeight: FontWeight.w400),
@@ -1129,7 +1129,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                                 contentPadding: EdgeInsets.only(
                                                     left: 20, right: 12),
                                                 hintStyle: TextStyle(
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color:
@@ -1245,7 +1245,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                   style: TextStyle(
                                     color: black,
                                     fontSize: 14,
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     fontStyle: FontStyle.normal,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -1255,7 +1255,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     color: black,
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     fontSize: 14,
                                     fontStyle: FontStyle.normal,
                                     fontWeight: FontWeight.w600,
@@ -1324,7 +1324,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                               "Please Wait...",
                                               style: TextStyle(
                                                 fontSize: 18,
-                                                fontFamily: 'Urbanist',
+                                                fontFamily: 'Poppins',
                                                 fontWeight: FontWeight.w600,
                                                 color: white,
                                               ),
@@ -1338,7 +1338,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                           'Sign up',
                                           style: TextStyle(
                                             fontSize: 18,
-                                            fontFamily: 'Urbanist',
+                                            fontFamily: 'Poppins',
                                             fontWeight: FontWeight.w600,
                                             color: white,
                                           ),
@@ -1366,7 +1366,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                     "or continue with",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       color: gray,
                                       fontSize: 14,
                                       fontStyle: FontStyle.normal,
@@ -1419,7 +1419,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                         Text(
                                           'Facebook',
                                           style: TextStyle(
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontSize: 16,
                                               fontWeight: FontWeight.w600,
                                               color: black),
@@ -1454,7 +1454,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                         Text(
                                           'Google',
                                           style: TextStyle(
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontSize: 16,
                                               fontWeight: FontWeight.w600,
                                               color: black),
@@ -1471,7 +1471,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                               child: Text(
                                 'To be able to register, you must agree to our',
                                 style: TextStyle(
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
                                     color: gray),
@@ -1483,7 +1483,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                 Text(
                                   'Terms of Use',
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
                                       color: black),
@@ -1491,7 +1491,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                 Text(
                                   ' and',
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400,
                                       color: gray),
@@ -1499,7 +1499,7 @@ class _signUpScreen extends State<signUpScreen> with InputValidationMixin {
                                 Text(
                                   ' Privacy Policy',
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
                                       color: black),

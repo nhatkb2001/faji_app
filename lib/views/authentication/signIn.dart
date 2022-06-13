@@ -57,7 +57,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                       child: Text(
                         'Welcome!',
                         style: TextStyle(
-                            fontFamily: 'Recoleta',
+                            fontFamily: 'Poppins',
                             fontSize: 32,
                             color: black,
                             fontWeight: FontWeight.w500),
@@ -85,7 +85,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                             child: Text(
                               'Email',
                               style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 16,
                                   color: black,
                                   fontWeight: FontWeight.w500),
@@ -107,7 +107,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                               alignment: Alignment.topCenter,
                               child: TextFormField(
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 16,
                                       color: black,
                                       fontWeight: FontWeight.w400),
@@ -138,7 +138,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                                     contentPadding:
                                         EdgeInsets.only(left: 20, right: 12),
                                     hintStyle: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400,
                                         color: black.withOpacity(0.5)),
@@ -168,7 +168,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                                   child: Text(
                                     'Password',
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w500),
@@ -193,7 +193,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                                         alignment: Alignment.topLeft,
                                         child: TextFormField(
                                             style: TextStyle(
-                                                fontFamily: 'Urbanist',
+                                                fontFamily: 'Poppins',
                                                 fontSize: 16,
                                                 color: black,
                                                 fontWeight: FontWeight.w400),
@@ -228,7 +228,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                                               contentPadding: EdgeInsets.only(
                                                   left: 20, right: 12),
                                               hintStyle: TextStyle(
-                                                  fontFamily: 'Urbanist',
+                                                  fontFamily: 'Poppins',
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w400,
                                                   color:
@@ -308,7 +308,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                               child: Text(
                                 'Forgot Password',
                                 style: TextStyle(
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                   color: black,
@@ -395,7 +395,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                                             "Please Wait...",
                                             style: TextStyle(
                                               fontSize: 18,
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w600,
                                               color: white,
                                             ),
@@ -409,7 +409,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                                         'Sign in',
                                         style: TextStyle(
                                           fontSize: 18,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w600,
                                           color: white,
                                         ),
@@ -437,7 +437,7 @@ class _signInScreen extends State<signInScreen> with InputValidationMixin {
                                   "or continue with",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                    fontFamily: 'Urbanist',
+                                    fontFamily: 'Poppins',
                                     color: gray,
                                     fontSize: 14,
                                     fontStyle: FontStyle.normal,

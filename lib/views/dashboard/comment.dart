@@ -150,7 +150,7 @@ class _atCommentScreen extends State<atCommentScreen>
                             child: Text(
                               'Comment',
                               style: TextStyle(
-                                  fontFamily: 'Recoleta',
+                                  fontFamily: 'Poppins',
                                   fontSize: 32,
                                   fontWeight: FontWeight.w500,
                                   color: black),
@@ -207,7 +207,7 @@ class _atCommentScreen extends State<atCommentScreen>
                                                         .ownerUsername,
                                                     style: TextStyle(
                                                         fontSize: 16,
-                                                        fontFamily: 'Urbanist',
+                                                        fontFamily: 'Poppins',
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         color: black),
@@ -238,7 +238,7 @@ class _atCommentScreen extends State<atCommentScreen>
                                                     text: commentList[index]
                                                         .content,
                                                     style: TextStyle(
-                                                        fontFamily: "Urbanist",
+                                                        fontFamily: "Poppins",
                                                         fontSize: 16.0,
                                                         color: black,
                                                         fontWeight:
@@ -287,7 +287,7 @@ class _atCommentScreen extends State<atCommentScreen>
                                             decoration: InputDecoration(
                                               border: InputBorder.none,
                                               hintStyle: TextStyle(
-                                                fontFamily: 'Urbanist',
+                                                fontFamily: 'Poppins',
                                                 fontSize: 14,
                                                 color: black,
                                               ),

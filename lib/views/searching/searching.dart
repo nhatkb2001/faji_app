@@ -116,7 +116,7 @@ class _atSearchScreen extends State<atSearchScreen>
                       alignment: Alignment.topCenter,
                       child: TextFormField(
                           style: TextStyle(
-                              fontFamily: 'Urbanist',
+                              fontFamily: 'Poppins',
                               fontSize: 14,
                               color: black,
                               fontWeight: FontWeight.w400),
@@ -154,7 +154,7 @@ class _atSearchScreen extends State<atSearchScreen>
                             border: InputBorder.none,
                             hintText: "What are you looking for?",
                             hintStyle: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 14,
                                 color: blue,
                                 fontWeight: FontWeight.w400),

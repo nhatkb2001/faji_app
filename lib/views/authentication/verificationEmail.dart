@@ -53,7 +53,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                     child: Text(
                       'Verification Account',
                       style: TextStyle(
-                          fontFamily: 'Recoleta',
+                          fontFamily: 'Poppins',
                           fontSize: 32,
                           fontWeight: FontWeight.w500,
                           color: black),
@@ -65,7 +65,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                     child: Text(
                       'You need to enter OTP Code, new password and authenticate them to mutate!',
                       style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 16,
                           fontWeight: FontWeight.w300,
                           color: black),
@@ -82,7 +82,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                           child: Text(
                             'Email',
                             style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 color: black,
                                 fontWeight: FontWeight.w500),
@@ -106,7 +106,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                                 alignment: Alignment.topLeft,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: white,
                                         fontWeight: FontWeight.w400),
@@ -118,7 +118,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -187,7 +187,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                     child: Text(
                       'Enter OTP Code',
                       style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 18,
                           color: black,
                           fontWeight: FontWeight.w600),
@@ -214,7 +214,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                           child: Text(
                             'Password',
                             style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 color: black,
                                 fontWeight: FontWeight.w500),
@@ -238,7 +238,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                                 alignment: Alignment.topLeft,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -250,7 +250,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -323,7 +323,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                           child: Text(
                             'Confirm Password',
                             style: TextStyle(
-                                fontFamily: 'Urbanist',
+                                fontFamily: 'Poppins',
                                 fontSize: 16,
                                 color: black,
                                 fontWeight: FontWeight.w500),
@@ -347,7 +347,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                                 alignment: Alignment.topLeft,
                                 child: TextFormField(
                                     style: TextStyle(
-                                        fontFamily: 'Urbanist',
+                                        fontFamily: 'Poppins',
                                         fontSize: 16,
                                         color: black,
                                         fontWeight: FontWeight.w400),
@@ -359,7 +359,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                                       contentPadding:
                                           EdgeInsets.only(left: 20, right: 12),
                                       hintStyle: TextStyle(
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           color: black.withOpacity(0.5)),
@@ -438,7 +438,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                           "Authenticate",
                           style: TextStyle(
                             color: white,
-                            fontFamily: 'Urbanist',
+                            fontFamily: 'Poppins',
                             fontSize: 18,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w600,
@@ -465,7 +465,7 @@ class _verificationEmailScreen extends State<verificationEmailScreen> {
                           "Cancel",
                           style: TextStyle(
                             color: black,
-                            fontFamily: 'Urbanist',
+                            fontFamily: 'Poppins',
                             fontSize: 18,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w600,
@@ -508,7 +508,7 @@ class OtpInput extends StatelessWidget {
         style: TextStyle(
             color: black,
             fontSize: 18,
-            fontFamily: 'Urbanist',
+            fontFamily: 'Poppins',
             fontWeight: FontWeight.w500),
         onChanged: (value) {
           if (value.length == 1) {

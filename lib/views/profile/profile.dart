@@ -250,7 +250,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                     child: Text('Following',
                                                         style: TextStyle(
                                                             fontFamily:
-                                                                'Urbanist',
+                                                                'Poppins',
                                                             fontSize: 16,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -279,7 +279,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                     child: Text('Follow',
                                                         style: TextStyle(
                                                             fontFamily:
-                                                                'Urbanist',
+                                                                'Poppins',
                                                             fontSize: 16,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -356,7 +356,7 @@ class _atProfileScreen extends State<atProfileScreen>
                               alignment: Alignment.topLeft,
                               child: Text(user.userName,
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
                                       color: blue)),
@@ -368,7 +368,7 @@ class _atProfileScreen extends State<atProfileScreen>
                               child: Text(
                                   'Turmoil is always your hero \nFollow on Facebook: https://www.facebook.com/minthin.2108/',
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 12,
                                       fontWeight: FontWeight.w300,
                                       color: black)),
@@ -380,7 +380,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                   //   text:
                                   //       'https://baemyungseong.github.io/portfolio_website',
                                   //   style: TextStyle(
-                                  //       fontFamily: 'Urbanist',
+                                  //       fontFamily: 'Poppins',
                                   //       fontSize: 20,
                                   //       fontWeight: FontWeight.w600,
                                   //       color: black),
@@ -392,7 +392,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                   text:
                                       'https://baemyungseong.github.io/portfolio_website',
                                   style: TextStyle(
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500,
                                       color: black),
@@ -444,7 +444,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                             : postList.length.toString(),
                                         style: TextStyle(
                                           fontSize: 20,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w600,
                                           color: black,
                                         ),
@@ -455,7 +455,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                         "Posts",
                                         style: TextStyle(
                                           fontSize: 12,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w400,
                                           color: gray,
                                         ),
@@ -477,7 +477,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                             : owner.follow.length.toString(),
                                         style: TextStyle(
                                           fontSize: 20,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w600,
                                           color: black,
                                         ),
@@ -488,7 +488,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                         "Followers",
                                         style: TextStyle(
                                           fontSize: 12,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w400,
                                           color: gray,
                                         ),
@@ -510,7 +510,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                             : owner.follow.length.toString(),
                                         style: TextStyle(
                                           fontSize: 20,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w600,
                                           color: black,
                                         ),
@@ -521,7 +521,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                         "Following",
                                         style: TextStyle(
                                           fontSize: 12,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w400,
                                           color: gray,
                                         ),
@@ -563,7 +563,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                 "Followers",
                                 style: TextStyle(
                                   fontSize: 16,
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontWeight: FontWeight.w600,
                                   color: blue,
                                 ),
@@ -578,7 +578,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                 "See all",
                                 style: TextStyle(
                                   fontSize: 12,
-                                  fontFamily: 'Urbanist',
+                                  fontFamily: 'Poppins',
                                   fontWeight: FontWeight.w600,
                                   color: gray,
                                 ),
@@ -621,7 +621,7 @@ class _atProfileScreen extends State<atProfileScreen>
                             "Photos",
                             style: TextStyle(
                               fontSize: 16,
-                              fontFamily: 'Urbanist',
+                              fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
                               color: blue,
                             ),
@@ -803,7 +803,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                         owner.userName,
                                         style: TextStyle(
                                           fontSize: 20,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w600,
                                           color: blue,
                                         ),
@@ -826,7 +826,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                           .toString(),
                                                   style: TextStyle(
                                                     fontSize: 20,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontWeight: FontWeight.w600,
                                                     color: black,
                                                   ),
@@ -837,7 +837,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                   "Posts",
                                                   style: TextStyle(
                                                     fontSize: 12,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontWeight: FontWeight.w400,
                                                     color: gray,
                                                   ),
@@ -861,7 +861,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                           .toString(),
                                                   style: TextStyle(
                                                     fontSize: 20,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontWeight: FontWeight.w600,
                                                     color: black,
                                                   ),
@@ -872,7 +872,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                   "Followers",
                                                   style: TextStyle(
                                                     fontSize: 12,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontWeight: FontWeight.w400,
                                                     color: gray,
                                                   ),
@@ -896,7 +896,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                           .toString(),
                                                   style: TextStyle(
                                                     fontSize: 20,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontWeight: FontWeight.w600,
                                                     color: black,
                                                   ),
@@ -907,7 +907,7 @@ class _atProfileScreen extends State<atProfileScreen>
                                                   "Following",
                                                   style: TextStyle(
                                                     fontSize: 12,
-                                                    fontFamily: 'Urbanist',
+                                                    fontFamily: 'Poppins',
                                                     fontWeight: FontWeight.w400,
                                                     color: gray,
                                                   ),

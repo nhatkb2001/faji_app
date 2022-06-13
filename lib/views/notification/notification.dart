@@ -273,7 +273,7 @@ class _atNotificationScreen extends State<atNotificationScreen>
                                                       TextSpan(
                                                         text: 'pan_chao ',
                                                         style: TextStyle(
-                                                          color: black,
+                                                          color: blue,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),

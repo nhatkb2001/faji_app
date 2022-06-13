@@ -135,7 +135,7 @@ class _postListView extends State<postListView> {
                                             postList[index].ownerUsername,
                                             style: TextStyle(
                                                 fontSize: 16,
-                                                fontFamily: 'Urbanist',
+                                                fontFamily: 'Poppins',
                                                 fontWeight: FontWeight.w600,
                                                 color: black),
                                           ))
@@ -214,7 +214,7 @@ class _postListView extends State<postListView> {
                                             style: TextStyle(
                                               fontSize: 16,
                                               color: black,
-                                              fontFamily: 'Urbanist',
+                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w600,
                                             ),
                                           )),
@@ -247,7 +247,7 @@ class _postListView extends State<postListView> {
                                     //       style: TextStyle(
                                     //         fontSize: 16,
                                     //         color: black,
-                                    //         fontFamily: 'Urbanist',
+                                    //         fontFamily: 'Poppins',
                                     //         fontWeight: FontWeight.w600,
                                     //       ),
                                     //     )),
@@ -295,7 +295,7 @@ class _postListView extends State<postListView> {
                                       style: TextStyle(
                                           fontSize: 16,
                                           color: black,
-                                          fontFamily: 'Urbanist',
+                                          fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w600,
                                           overflow: TextOverflow.ellipsis),
                                       maxLines: 1,
@@ -310,7 +310,7 @@ class _postListView extends State<postListView> {
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: gray,
-                                      fontFamily: 'Urbanist',
+                                      fontFamily: 'Poppins',
                                       fontWeight: FontWeight.w600,
                                     ),
                                   )),

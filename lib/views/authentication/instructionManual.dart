@@ -45,7 +45,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                     child: Text(
                       'Instruction Manual',
                       style: TextStyle(
-                          fontFamily: 'Recoleta',
+                          fontFamily: 'Poppins',
                           fontSize: 32,
                           fontWeight: FontWeight.w500,
                           color: black),
@@ -57,7 +57,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                     child: Text(
                       'To be able to recover your password now, please follow these steps with us:',
                       style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 16,
                           fontWeight: FontWeight.w300,
                           color: black),
@@ -74,7 +74,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                   RichText(
                     text: TextSpan(
                       style: TextStyle(
-                        fontFamily: 'Urbanist',
+                        fontFamily: 'Poppins',
                         fontSize: 16,
                         color: black,
                         fontWeight: FontWeight.w300,
@@ -98,7 +98,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                   RichText(
                     text: TextSpan(
                       style: TextStyle(
-                        fontFamily: 'Urbanist',
+                        fontFamily: 'Poppins',
                         fontSize: 16,
                         color: black,
                         fontWeight: FontWeight.w300,
@@ -131,7 +131,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                   RichText(
                     text: TextSpan(
                       style: TextStyle(
-                        fontFamily: 'Urbanist',
+                        fontFamily: 'Poppins',
                         fontSize: 16,
                         color: black,
                         fontWeight: FontWeight.w300,
@@ -165,7 +165,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                   RichText(
                     text: TextSpan(
                       style: TextStyle(
-                        fontFamily: 'Urbanist',
+                        fontFamily: 'Poppins',
                         fontSize: 16,
                         color: black,
                         fontWeight: FontWeight.w300,
@@ -210,7 +210,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                     child: Text(
                       'For any questions or problems please email us at',
                       style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 14,
                           color: black,
                           fontWeight: FontWeight.w300),
@@ -224,7 +224,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                     child: Text(
                       'HelpFaji@gmail.com',
                       style: TextStyle(
-                          fontFamily: 'Urbanist',
+                          fontFamily: 'Poppins',
                           fontSize: 18,
                           color: black,
                           fontWeight: FontWeight.w600),
@@ -249,7 +249,7 @@ class _instructionManualScreen extends State<instructionManualScreen> {
                           "Understand",
                           style: TextStyle(
                             color: white,
-                            fontFamily: 'Urbanist',
+                            fontFamily: 'Poppins',
                             fontSize: 18,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w600,
