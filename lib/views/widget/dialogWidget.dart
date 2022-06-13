@@ -27,7 +27,7 @@ genderDialog(
               ),
               backgroundColor: white,
               content: Stack(
-                  overflow: Overflow.visible,
+                  clipBehavior: Clip.none,
                   alignment: Alignment.topCenter,
                   children: [
                     Container(
